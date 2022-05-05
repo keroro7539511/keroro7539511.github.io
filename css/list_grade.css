@@ -1,0 +1,184 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #F0F0F0;
+    border-color: blueviolet;
+    border-width: 3px;
+    border-style: hidden;
+}
+
+#div{
+    height: 74.2%;
+    width: 99.8%;;
+    border-color: brown;
+    border-width: 3px;
+    border-style: hidden;
+}
+
+/* select_box style */
+#select_div{
+    margin-top: -2%;
+    display: flex;
+    border-width: 3px;
+    width: 97%;
+    height: 70px;
+    border-color: red;
+    border-style: hidden;
+    margin-left: 2%;
+}
+
+#word{
+    margin-top: 20px;
+}
+
+.select_box {
+    width: 150px;
+    position: relative;
+    margin: 10px;
+    padding: 0;
+    font-size: 12px;
+}
+
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.select_box input {
+    cursor: pointer;
+    display: block;
+    line-height: 25px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.select_box ul {
+    width: 180px;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: hidden;
+    display: none;
+    background: #ebebeb;
+    z-index: 99999;
+}
+
+.select_box ul li {
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    padding-left: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hover {
+    background: #ccc;
+}
+
+#div>.show{
+    display: flex;
+}
+#div>div{
+    display: none;
+}
+
+#myselect{
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 3px solid #E5E5E5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px #666;
+}
+
+/* list style */
+.block{
+    height: 99.3%;
+    width: 99.7%;
+    margin-top: 0%;
+    border-color: teal;
+    border-width: 1%;
+    border-style: hidden;
+}
+
+.table_area{
+    height: 96.6%;
+    width: 99.7%;
+    margin-top: 1%;
+    border-color: aqua;
+    border-width: 1%;
+    border-style: hidden;
+}
+
+.table_style{
+    height: 10%;
+    width: 95%;
+    border-color: #000000;
+    border-top: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+    margin-left: 2.5%;
+}
+
+.table_data_style1{
+    height: 10%;
+    width: 5%;
+    border-color: #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+}
+
+.table_data_style2{
+    height: 10%;
+    width: 10%;
+    border-color: #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+}
+
+.table_data_style3{
+    height: 10%;
+    width: 10%;
+    border-color: #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+}
+
+.table_data_style4{
+    height: 10%;
+    width: 50%;
+    border-color: #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+}
+
+.img_style{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 45%;
+    margin-left: 17%;
+}

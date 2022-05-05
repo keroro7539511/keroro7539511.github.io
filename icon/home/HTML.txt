@@ -1,0 +1,231 @@
+------------------------------HTML---------------------------------
+<!DOCTYPE html>			//設定type
+<h1> ~ <h6> 			//字體
+<a href=""> 			//鏈結  #代表回到最上層
+<img src="">			//圖片鏈結 可用網路上的
+	alt=""			//圖片文字介紹
+
+<form action = "">		//發送內容至...
+
+<ul>				//無序列表
+	<li>			
+<ol>				//有序列表
+	<li>
+
+<input type = "text">		//輸入
++placeholder=""			//淺字
++required			//必須輸入
+
+<label for="">			//一個選項用一個label	
+	<input type="radio">	//單選
+	<input type="checkbox">	//複選
++checked			//預設選取
+
+------------------------------CSS---------------------------------
+//基礎 style
+<物件 style="內容">
+	
+or
+
+<style>
+物件 {內容}
+or
+.class {內容}
+or
+#id {內容}
+</style>
+
+//引入Google字體
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+!important			//必定不會被覆蓋
+
+--自取名稱: 			//創建變數
+CSS內鍵字: var(變數)		//使用變數
+---------------------
+color: 顏色;			//設定顏色
+font-size: ○px			//字體大小
+font-family: 字型, 備用字型	//字型
+width: ○px			//寬度大小
+height:○px			//長度大小
+
+border				//邊框
+      -color: 顏色;
+      -width: ○px;
+      -style: 特效;
+      -radius: ○px;		//邊框圓角
+               50%		//圓形
+
+background-color: 顏色
+padding:上右下左		//內邊距(內容與border的空隙大小)
+margin:上右下左			//外邊距(元素與其他元素之間的距離 數字負的會更大)
+       auto			//自動置中
+
+------------------------------視覺設計---------------------------------
+text-align: 			//控制文本對齊
+	    justify		//左右對齊
+	    center		//置中
+	    left		//靠左(默認值)
+	    right		//靠右
+
+標籤strong			//粗體
+標籤u				//底線
+標籤em				//斜線
+標籤s				//刪除線
+標籤hr				//水平線 or 分割線
+
+rgba: r, g, b, a		// a -> 透明度0~1
+box-shadow:			//添加陰影效果
+opacity:			//透明度
+
+text-transform:			//字型轉換
+		lowercase	//全小寫
+		uppercase	//全大寫
+		capitalize	//第一個英文字大寫
+		initial		//預設
+		inherit		//使用父元素的text-transform
+		none		//不改變
+
+font-weight: 			//字體粗細
+line-height			//行間距離
+
+a:hover				//觸碰反應
+
+position: relative		//調整位置(不可重疊)
+top, bottom, left, right	//相反方向移動
+
+position: absolute		//調整位置(可重疊)(隨著滾動而移動)
+top, bottom, left, right	//相同方向移動
+
+position: fixed			//調整位置(可重疊)(不隨滾動而移動)
+top, bottom, left, right	//相同方向移動
+
+float:				//向左或向右浮動  直到外邊緣碰到框
+      left or right: ○px
+
+z-index: 數字			//重疊次序(越大越前面)
+hsl(色相, 飽和度, 亮度)
+
+background: 
+linear-gradient(角度, 顏色1, 顏色2...)					//漸層顏色
+repeat-linear-gradient(角度, 顏色1 起始位置, 顏色2 起始位置) 		//重複使用漸層
+url(圖片網址)								//背景圖片
+
+transform:
+scale(數字)								//放大倍率
+skewX(角度)								//X軸翻轉○度
+skewY(角度)								//Y軸翻轉○度
+
+animation-name					//動畫名稱
+         -duration				//花費時間
+	 -timing-function			//動畫速度曲線
+		:ease				//先慢中快後慢(預設值)
+		:ease-out			//先快後慢
+		:ease-in			//先慢後快
+		:linear				//速度一致
+		:cubic-bezier(p0, p1, p2, p3)	//p0 p3為起始、終點位置
+
+@keyframes(以百分比改變時間)	//創建動畫
+
+@media (max(min)-width(height)){ 		//畫面最小(最大)寬度(高度)觸發事件
+	/* CSS Rule */
+}
+------------------------------標籤---------------------------------
+<head>						//常用於標題
+<main>						//常用於內容
+<footer>						//常用於底層
+<article>					//分段標籤，用於獨立呈現完整內容
+<section>					//對主題相關的事物分組
+<div>						//一般的內容組
+<nav>						//用於鏈結
+<audio>						//用於音頻
+	+controls				//啟動音樂
+	<sorce src="" type="audio/副檔名">	//影音的來源及開檔格式
+
+<figure>					//用於圖片顯示
+
+<label>						//特定表單文本，選項明顯
+	+for="id"				//綁定表單元件
+
+<fieldset>					//使用多選項時
+	<legend>				//詳細說明
+<input type="date">				//日期輸入
+name............................................//用於傳值用
+<time>
+	+datetime='yyyy-mm-dd'			//顯示目標日期
+
+
+------------------------------排版---------------------------------
+vm: 視窗寬度百分比
+vh: 視窗高度百分比
+vmin: 視窗較小尺寸百分比 (高 or 寬)
+vmax: 視窗較大尺寸百分比 (高 or 寬)
+
+-----------------------------flexbox--------------------------------
+display: flex					//必定要有
+
+flex-direction:					//排版規則(預設row)
+	row					//橫向排列
+	column					//直向排列
+	row-reverse				//橫向反轉排列
+	column-reverse				//直向反轉排列
+
+justify-content:				//排列順序
+	center					//讓flex子元素排列在flex容器中間
+	flex-start				//從前端開始放置元素
+	flex-end				//從後端開始放置元素
+	space-between				//項目間會保留間距，第一個元素與最後一個元素會緊貼邊緣
+	space-arround				//項目間會保留間距，第一個元素與最後一個元素不會緊貼邊緣
+
+align-items:					//用於交叉軸調整flex子元素(預設center)
+	flex-start				//從前端開始放置元素
+	flex-end				//從後端開始放置元素
+	center					//讓flex子元素排列在中間
+	stretch					//拉伸項目 填滿flex容器
+	baseline				//基線對齊排列
+
+flex-wrap:					//能夠使項目換行
+	nowrap					//不換行
+	wrap					//行從上到下, 列從左到右
+	wrap-reverse				//行從下到上, 列從右到左
+
+flex-shrink:數字				//若flex容器太小 會自動壓縮元素(壓縮倍率)
+flex-grow:數字					//若flex容器太大 會自動放大元素(放大倍率)
+flex-basis:大小單位				//設定元素初始大小
+flex: grow shrink basis				//簡易寫法(初始值 0 1 auto)
+order						//容器元素順序
+align-self					//允許每個元素有各別對齊方式，非一次性設置全部元素，可覆蓋align-items
+
+-----------------------------CSS網格--------------------------------
+display: grid					//網格屬性
+
+grid-template-columns:	X X...			//添加列數，每列的大小各別為多少
+grid-template-rows: X X...			//添加行數，美行的大小各別為多少
+	repeat(次數, X X...)...			//重複裡面的行或高次數
+	auto-fill				//根據容量大小自動調整
+	auto-fit				//根據容量大小完整排列
+	fr					//剩餘空間的一個比例
+	auto					//自動等於內容的寬高度
+	%					//容器寬高的百分比
+	minmax(Xpx, Opx)			//隨著網格大小縮放物件, 最大為O 最小為X
+
+grid-column-gap					//列之間的間距
+grid-row-gap					//行之間的間距
+grid-gap (column) (row)				//簡化間距
+grid-column index / index			//定義網格行列開始結束位置
+grid-row index / index				//定義網格列列開始結束位置
+
+justify-self					//沿著行網格內容對齊
+	start					//靠左對齊
+	center					//靠右對齊
+	end					//靠右對齊
+align-self					/沿著列網格內容對齊(與justify self變數相同)
+justify-items (justify) (align)			//簡化版
+
+grid-template-areas: 				//網格模板設定
+	"header header header"			//設定內容
+      	"advert content content"
+      	"footer footer footer";
+
+grid-area:					//放置模板區域
+grid-area:起始水平/起始垂直/末水平/末垂直	//另類放置模板方式

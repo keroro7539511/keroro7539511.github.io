@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            width: 500px;
+            display: flex;
+            margin: auto;
+        }
+        ul>li{
+            margin-right: 20px;
+        }
+        #div{
+            width: 500px;
+            margin: auto;
+            display: flex;
+        }
+        #div>div{
+            margin-left: 50px;
+        }
+        .active{
+            background: red;
+        }
+        #div>.show{
+            display: inline-block;
+        }
+        #div>div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+        <li class="active">亞索</li>
+        <li>劍聖</li>
+        <li>諾克薩斯</li>
+        <li>沙皇</li>
+    </ul>
+        <div id="div">
+            <div class="show">面對疾風吧</div>
+            <div>你的劍就是我的劍</div>
+            <div>只有我才能帶領你走向勝利</div>
+            <div>你們的皇帝回來了！！</div>
+        </div>
+    <script>
+        $("#ul").on( "click","li",function(){
+            // alert("點選了")
+            var index=$(this).index();
+            console.log(index);
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active")
+            $("#div>div").eq(index).addClass("show").siblings().removeClass("show")
+        } )
+    </script>
+</body>
+</html>
