@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="/css/card_calendar.css" />
     <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/main.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- Moment.js v2.20.0 -->
@@ -24,36 +23,36 @@
         <img src="/icon/card_calendar/新日期.png">
         <p>行事曆清單（５）</p>
         <div id="roll">
-            <div class="div_shape active"><img src>
+            <div class="div_shape active">
                 <img class="img_position" src="/icon/card_calendar/1_所有行事曆.png" />
             </div>
-            <div class="div_shape"><img src>
+            <div class="div_shape">
                 <img class="img_position" src="/icon/card_calendar/2_使者介面設計.png" />
             </div>
-            <div class="div_shape"><img src>
+            <div class="div_shape">
                 <img class="img_position" src="/icon/card_calendar/3_設計方法.png" />
             </div>
-            <div class="div_shape"><img src>
+            <div class="div_shape">
                 <img class="img_position" src="/icon/card_calendar/4_研究室.png" />
             </div>
-            <div class="div_shape"><img src>
+            <div class="div_shape">
                 <img class="img_position" src="/icon/card_calendar/5_個人行程.png" />
             </div>
-            <div class="div_shape"><img src>
+            <div class="div_shape">
                 <img class="img_position" src="/icon/card_calendar/6_家族行程.png">
             </div>
-            <div class="div_shape"><img src>
+            <div class="div_shape">
                 <img class="img_position" src="/icon/card_calendar/7_新增行事曆.png">
             </div>
         </div>
     </div>
     <div class="right_part" id="div">
-        <div id="calendar1"></div>
-        <div id="calendar2"></div>
-        <div id="calendar3"></div>
-        <div id="calendar4"></div>
-        <div id="calendar5"></div>
-        <div id="calendar6"></div>
+        <div id="calendar1" class="canlendar show"></div>
+        <div id="calendar2" class="canlendar"></div>
+        <div id="calendar3" class="canlendar"></div>
+        <div id="calendar4" class="canlendar"></div>
+        <div id="calendar5" class="canlendar"></div>
+        <div id="calendar6" class="canlendar"></div>
     </div>
 </body>
 
@@ -75,7 +74,8 @@
             dayNamesShort: [
                 '週一', '週二', '週三', '週四', '週五', '週六', '週日'
             ],
-            contentHeight: 800,
+            contentHeight: 700,
+            aspectRatio: 1,
             events: [
                 {
                     title: '助教',
@@ -192,7 +192,8 @@
         $('#calendar2').fullCalendar({
             header: false,
             defaultDate: "2022-03-22",
-            contentHeight: 800,
+            contentHeight: 700,
+            height: 900,
             dayNamesShort: [
                 '週一', '週二', '週三', '週四', '週五', '週六', '週日'
             ],
@@ -230,7 +231,8 @@
         $('#calendar3').fullCalendar({
             header: false,
             defaultDate: "2022-03-22",
-            contentHeight: 800,
+            contentHeight: 700,
+            height: 900,
             dayNamesShort: [
                 '週一', '週二', '週三', '週四', '週五', '週六', '週日'
             ],
@@ -267,7 +269,8 @@
         $('#calendar4').fullCalendar({
             header: false,
             defaultDate: "2022-03-22",
-            contentHeight: 800,
+            contentHeight: 700,
+            height: 900,
             dayNamesShort: [
                 '週一', '週二', '週三', '週四', '週五', '週六', '週日'
             ],
@@ -297,7 +300,8 @@
         $('#calendar5').fullCalendar({
             header: false,
             defaultDate: "2022-03-22",
-            contentHeight: 800,
+            contentHeight: 700,
+            height: 900,
             dayNamesShort: [
                 '週一', '週二', '週三', '週四', '週五', '週六', '週日'
             ],
@@ -333,7 +337,8 @@
         $('#calendar6').fullCalendar({
             header: false,
             defaultDate: "2022-03-22",
-            contentHeight: 800,
+            contentHeight: 700,
+            height: 900,
             dayNamesShort: [
                 '週一', '週二', '週三', '週四', '週五', '週六', '週日'
             ],
