@@ -1,0 +1,76 @@
+body{
+    width: 100%;
+    height: 95%;
+    border-color: red;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+#left_part{
+    width:15%; height:70%; float:left; display:inline;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-style: hidden;
+    margin-left: 2%;
+}
+
+.right_part{
+    width:75%; height:80%; float:left; display:inline;
+    border-color: blue;
+    border-width: 5px;
+    border-style: hidden;
+    overflow:auto;
+}
+
+p{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#roll{
+    width: 100%;
+    height: 40%;
+    border-color: pink;
+    border-width: 5px;
+    border-style: hidden;
+    overflow:auto;
+}
+
+.div_shape{
+    align-items: center;
+    width: 80%;
+    height: 20%;
+    border-color: #E5E5E5;
+    border-width:0.1mm;
+    border-style: hidden;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 5%;
+}
+
+#roll::-webkit-scrollbar{
+    display: none;
+}
+
+.img_position{
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.right_part::-webkit-scrollbar{
+    display: none;
+}
+
+#div>.show{
+    opacity: 1;
+    z-index: 1;
+}
+#div>div{
+    opacity: 0;
+    z-index: -1;
+}
+
+.canlendar{
+    position:absolute;
+    width: 75%;
+}

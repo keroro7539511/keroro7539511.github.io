@@ -1,0 +1,51 @@
+*{margin:0;padding:0};
+
+img{border:none}
+
+header{     /*header 主體頁面*/
+    font-size: 40px;
+    font-weight:900;
+    padding: 0%;
+    margin-bottom: 20px;
+    border-width: 3px;
+    border-color: red;
+    border-style: hidden;
+    width: 100%;
+    height: 20%;
+}
+
+#background_header{ /*藍色背景*/
+    position: absolute;
+    z-index: 0;
+}
+
+#front_page{        /*首頁按鈕*/
+    position: absolute;
+    z-index: 1;
+    text-decoration:none;
+    color: white;
+    opacity: 0.4;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+#buttom_list{       /*控制buttom元件的div*/
+    width: 100%;
+    height: 80%;
+    text-align: right; 
+}
+
+.buttom_position{   /*設置buttom的position模式*/
+    position: relative;
+    margin-right: 0.2%;
+}
+
+.img_situation{
+    margin-top: 30px;
+    margin-right: 1%;
+}
+
+.img_situation:hover{
+    background-color: rgba(255,255,255,0.25);
+
+}

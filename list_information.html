@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel="icon" href="logo.ico" type="image/x-icon"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/list_inforamation.css"/>
+        <link rel="stylesheet" href="/css/common.css"/>
+        <link rel="icon" href="/icon/logo.ico" type="image/icon"/>
+        <header class="include" file="header.html">引入</header>
+    </head>
+    <body>
+        <div class="table_area">
+            <a href="#">    
+                <table class="table_style hover_style">
+                    <tr>
+                        <td class="table_data_style">
+                            <div class="img_hover">
+                                <img src="icon/card_information/個人簡介含字.png" class="img_style">
+                            </div>
+                        </td>
+                        <td>
+                            <img src="icon/card_information/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </a>
+            <a href="#">    
+                <table class="table_style hover_style">
+                    <tr>
+                        <td class="table_data_style">
+                            <div class="img_hover">
+                                <img src="icon/card_information/課程含字.png" class="img_style">
+                            </div>
+                        </td>
+                        <td>
+                            <img src="icon/card_information/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </a>
+            <a href="list_grade.html">    
+                <table class="table_style hover_style">
+                    <tr>
+                        <td class="table_data_style">
+                            <div class="img_hover">
+                                <img src="icon/card_information/成績含字.png" class="img_style">
+                            </div>
+                        </td>
+                        <td>
+                            <img src="icon/card_information/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </a>    
+            <a href="#">    
+                <table class="table_style hover_style">
+                    <tr>
+                        <td class="table_data_style">
+                            <div class="img_hover">
+                                <img src="icon/card_information/證照含字.png" class="img_style">
+                            </div>
+                        </td>
+                        <td>
+                            <img src="icon/card_information/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </a>
+            <a href="#">    
+                <table class="table_style hover_style">
+                    <tr>
+                        <td class="table_data_style">
+                            <div class="img_hover">
+                                <img src="icon/card_information/經歷含字.png" class="img_style">
+                            </div>                           
+                        </td>
+                        <td>
+                            <img src="icon/card_information/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </a>
+            <a href="#">    
+                <table class="table_style hover_style">
+                    <tr>
+                        <td class="table_data_style">
+                            <div class="img_hover">
+                                <img src="icon/card_information/資料匯出含字.png" class="img_style">
+                            </div>
+                        </td>
+                        <td>
+                            <img src="icon/card_information/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        <script>
+            $(".include").each(function(){
+                if(!!$(this).attr("file")) {
+                    var $includeObj = $(this);
+                    $(this).load($(this).attr("file"), function(html){
+                        $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+                    })
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+#select_div{
+    margin-top: -2%;
+    display: flex;
+    border-width: 3px;
+    width: 97%;
+    height: 70px;
+    border-color: red;
+    border-style: hidden;
+    margin-left: 2%;
+}
+
+#word{
+    margin-top: 20px;
+}
+
+.select_box {
+    width: 150px;
+    position: relative;
+    margin: 10px;
+    padding: 0;
+    font-size: 12px;
+}
+
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.select_box input {
+    cursor: pointer;
+    display: block;
+    line-height: 25px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.select_box ul {
+    width: 180px;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: hidden;
+    display: none;
+    background: #ebebeb;
+    z-index: 99999;
+}
+
+.select_box ul li {
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    padding-left: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hover {
+    background: #ccc;
+}
+
+#div>.show{
+    display: flex;
+}
+#div>div{
+    display: none;
+}
+
+#myselect{
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 3px solid #E5E5E5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px #666;
+}
+
+
+.score_size{
+
+    border-color: red;
+    border-style: hidden;
+    border-width: 3px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+hr {
+    border: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 1px;
+    background: linear-gradient(to right, transparent, black, transparent);
+}
+
+p{
+    margin-bottom: 5%;
+}

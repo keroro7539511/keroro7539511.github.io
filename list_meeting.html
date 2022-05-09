@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/Home.css"/>
+    <link rel="stylesheet" href="css/meeting.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <header class="include" file="list_header.html">引入</header>
+</head>
+    <body>
+        <div id="body">
+            <div class="meeting_icon_area">
+                <div class="meeting_icon_flex">
+                    <div class="meeting_icon"><a href="#"><img src="icon/meeting/發起即時會議.png"></a></div>
+                    <div class="meeting_icon"><img src="icon/meeting/輸入代碼或暱稱.png"></div>
+                </div>
+            </div>
+            <div id="homewallpaper">
+                <img src="icon/home/Education-bro.png" id="wallpaper" style="opacity: 0.5;">
+            </div>
+        </div>
+        <script>
+            $(".include").each(function(){
+                if(!!$(this).attr("file")) {
+                    var $includeObj = $(this);
+                    $(this).load($(this).attr("file"), function(html){
+                        $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+                    })
+                }
+            });
+        </script>    
+    </body>
+</html>

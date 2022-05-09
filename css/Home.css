@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    
+    text-decoration:none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+#body{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    border-color:black;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+.homeclick{
+    margin-top: 4%;
+    height: auto;
+    width: 50%;
+    margin-left: 7%;
+    border-color: aqua;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+#homewallpaper{
+    height: auto;
+    width: 120%;
+    margin-left: 20%;
+    border-color: brown;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+#wallpaper{
+    padding-top: 27%;
+    padding-left: 10%;
+    width: 70%;
+}
+
+.homeicon{
+    max-width: 80%;
+    margin-top: 2%;
+    height: 8%;
+    
+}
+
+ul.dropdown-menu{
+    display: none;
+}
+
+.opacity:hover{
+    opacity: 0.55;
+    transition-duration: 200ms;
+}
+
+.btn_font_set{
+    background-color: #1073D7;
+    border-color: #1073D7;
+    border-style: solid;
+    border-width: 25px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white ;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.dropdown-menu li{
+    width: 270%;
+}
+
+.homeclick li:hover>ul.dropdown-menu{
+    position: absolute;
+    display: block;
+    width: 19%;
+    height: auto;
+    background-color: #C694F2;
+    border-color: #C694F2;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 10px;
+    background-color: #C694F2;
+    margin-left: 21.5%;
+    margin-top: -4.1%;
+}
+
+#first{
+    max-width: 32%;
+    background-color: #9741E2;
+    border-color: #9741E2;
+    border-style: solid;
+    border-width: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white ;
+    display: flex;
+    align-items: center;
+    margin-left: 0.35%;
+}
+
+.sub_btn_font_set{
+    margin-top: 0.8%;
+    max-width: 32%;
+    background-color: #9741E2;
+    border-color: #9741E2;
+    border-style: solid;
+    border-width: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white ;
+    display: flex;
+    align-items: center;
+    margin-left: 0.35%;
+}
