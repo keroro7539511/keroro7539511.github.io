@@ -9,12 +9,21 @@ body{
     border-style: hidden;
 }
 
-.grade_area>.card_position{
+#below_area{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.grade_area>.card_position2{
     border-color: aqua;
     border-width: 3px;
-    border-style: solid;
-    height: 100%;
-    display: flex;
+    border-style: hidden;
+    height: 30%;
+    position: absolute;
+}
+
+.card_position1{
+    margin-top: -4%;
 }
 
 .carousel-item{
@@ -24,9 +33,9 @@ body{
 .buttom_size{
     background-color: #ffffff;
     margin-top: 5%;
-    margin-left: 3%;
-    width: 250px;
-    height: 250px;
+    margin-left: -9%;
+    width: 210px;
+    height: 210px;
     border-color: #E5E5E5;
     border-width:0.1mm;
     border-style: solid;
@@ -68,10 +77,11 @@ body{
 /* card_grade */
 
 .information_area{
-    height: 20%;
+    margin-top: -2%;
+    height: 30%;
     border-color: #66ff00;
     border-width: 1px;
-    border-style: solid;
+    border-style: hidden;
 }
 
 #select_div{
@@ -143,10 +153,30 @@ li {
     background: #ccc;
 }
 
+#semester1{
+    opacity: 1;
+    z-index: 1;
+}
+
+#semester2{
+    opacity: 0;
+    z-index: -1;
+}
+
+#semester3{
+    opacity: 0;
+    z-index: -1;
+}
+
+#semester4{
+    opacity: 0;
+    z-index: -1;
+}
+
 .grade_area{
     border-color: #000000;
     border-width: 1px;
-    border-style: solid;
+    border-style: hidden;
     height: 30%;
     display: flex;
     justify-content: center;
@@ -186,43 +216,6 @@ hr {
 
 p{
     margin-bottom: 5%;
-}
-
-#tab > .tab-content-1{
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-#tab > .tab-content-2{
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-#tab > .tab-content-3{
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-#tab > .tab-content-4{
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-span ~ #tab > .tabb:first-of-type,
-#tab-1:target ~ #tab > div.tab-content-1,
-#tab-2:target ~ #tab > div.tab-content-2,
-#tab-3:target ~ #tab > div.tab-content-3,
-#tab-4:target ~ #tab > div.tab-content-4 {
-    width: 100%;
-    visibility: visible;
-}
-
-span{
-    display: none;
 }
 
 /* carousel */
