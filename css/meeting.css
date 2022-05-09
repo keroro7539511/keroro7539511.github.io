@@ -1,0 +1,9 @@
+.meeting_icon_flex>div{
+    margin-left: 5%;
+}
+
+.meeting_icon_flex{
+    display: flex;
+    margin-top: 70%;
+    margin-left: 10%;
+}

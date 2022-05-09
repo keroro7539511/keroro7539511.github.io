@@ -1,0 +1,361 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/card_calendar.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Moment.js v2.20.0 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
+    <!-- FullCalendar v3.8.1 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.print.css" rel="stylesheet"
+        media="print">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.min.js"></script>
+</head>
+<header class="include" file="header.html">引入</header>
+
+
+<body>
+    <div id="left_part">
+        <a><img src="/icon/card_calendar/组 10.png" /></a>
+        <img src="/icon/card_calendar/新日期.png">
+        <p>行事曆清單（５）</p>
+        <div id="roll">
+            <div class="div_shape active"><img src>
+                <img class="img_position" src="/icon/card_calendar/1_所有行事曆.png" />
+            </div>
+            <div class="div_shape"><img src>
+                <img class="img_position" src="/icon/card_calendar/2_使者介面設計.png" />
+            </div>
+            <div class="div_shape"><img src>
+                <img class="img_position" src="/icon/card_calendar/3_設計方法.png" />
+            </div>
+            <div class="div_shape"><img src>
+                <img class="img_position" src="/icon/card_calendar/4_研究室.png" />
+            </div>
+            <div class="div_shape"><img src>
+                <img class="img_position" src="/icon/card_calendar/5_個人行程.png" />
+            </div>
+            <div class="div_shape"><img src>
+                <img class="img_position" src="/icon/card_calendar/6_家族行程.png">
+            </div>
+            <div class="div_shape"><img src>
+                <img class="img_position" src="/icon/card_calendar/7_新增行事曆.png">
+            </div>
+        </div>
+    </div>
+    <div class="right_part" id="div">
+        <div id="calendar1"></div>
+        <div id="calendar2"></div>
+        <div id="calendar3"></div>
+        <div id="calendar4"></div>
+        <div id="calendar5"></div>
+        <div id="calendar6"></div>
+    </div>
+</body>
+
+
+<script>
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+            })
+        }
+    });
+
+    $(document).ready(function () {
+        $('#calendar1').fullCalendar({
+            header: false,
+            defaultDate: "2022-03-22",
+            dayNamesShort: [
+                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+            ],
+            contentHeight: 800,
+            events: [
+                {
+                    title: '助教',
+                    start: '2022-03-04',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-11',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-18',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+
+                {
+                    title: '助教',
+                    start: '2022-03-25',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+
+                {
+                    title: '節日',
+                    start: '2022-03-14',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                {
+                    title: '出差',
+                    start: '2022-03-22',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                
+                {
+                    title: '聚餐',
+                    start: '2022-03-25',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                
+                {
+                    title: '出差',
+                    start: '2022-03-29',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                
+                {
+                    title: '工作坊',
+                    start: '2022-03-18',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-16',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                {
+                    title: '助教',
+                    start: '2022-03-23',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-30',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                
+                {
+                    title: '開會',
+                    start: '2022-03-18',
+                    backgroundColor: '#F27D8D',
+                    borderColor: '#F27D8D'
+                },
+                
+                {
+                    title: '開會',
+                    start: '2022-03-25',
+                    backgroundColor: '#F27D8D',
+                    borderColor: '#F27D8D'
+                },
+                
+                {
+                    title: '開會',
+                    start: '2022-03-30',
+                    backgroundColor: '#F27D8D',
+                    borderColor: '#F27D8D'
+                },
+                
+                
+                {
+                    title: '奶奶家',
+                    start: '2022-03-28',
+                    backgroundColor: '#C68CCF',
+                    borderColor: '#C68CCF'
+                }
+            ]
+        });
+        $('#calendar2').fullCalendar({
+            header: false,
+            defaultDate: "2022-03-22",
+            contentHeight: 800,
+            dayNamesShort: [
+                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+            ],
+            events: [
+                {
+                    title: '助教',
+                    start: '2022-03-04',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-11',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-18',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                },
+
+                {
+                    title: '助教',
+                    start: '2022-03-25',
+                    backgroundColor: '#FFCF52',
+                    borderColor: '#FFCF52'
+                }
+            ]
+        
+        });
+        $('#calendar3').fullCalendar({
+            header: false,
+            defaultDate: "2022-03-22",
+            contentHeight: 800,
+            dayNamesShort: [
+                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+            ],
+            events: [
+            {
+                    title: '工作坊',
+                    start: '2022-03-18',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-16',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                {
+                    title: '助教',
+                    start: '2022-03-23',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                },
+                
+                {
+                    title: '助教',
+                    start: '2022-03-30',
+                    backgroundColor: '#91DA72',
+                    borderColor: '#91DA72'
+                }
+            ]
+
+        });
+        $('#calendar4').fullCalendar({
+            header: false,
+            defaultDate: "2022-03-22",
+            contentHeight: 800,
+            dayNamesShort: [
+                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+            ],
+            events: [
+            {
+                    title: '開會',
+                    start: '2022-03-18',
+                    backgroundColor: '#F27D8D',
+                    borderColor: '#F27D8D'
+                },
+                
+                {
+                    title: '開會',
+                    start: '2022-03-25',
+                    backgroundColor: '#F27D8D',
+                    borderColor: '#F27D8D'
+                },
+                
+                {
+                    title: '開會',
+                    start: '2022-03-30',
+                    backgroundColor: '#F27D8D',
+                    borderColor: '#F27D8D'
+                }
+            ]
+        });
+        $('#calendar5').fullCalendar({
+            header: false,
+            defaultDate: "2022-03-22",
+            contentHeight: 800,
+            dayNamesShort: [
+                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+            ],
+            events: [
+            {
+                    title: '節日',
+                    start: '2022-03-14',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                {
+                    title: '出差',
+                    start: '2022-03-22',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                
+                {
+                    title: '聚餐',
+                    start: '2022-03-25',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                },
+                
+                {
+                    title: '出差',
+                    start: '2022-03-29',
+                    backgroundColor: '#00CAF1',
+                    borderColor: '#00CAF1'
+                }
+            ]
+        });
+        $('#calendar6').fullCalendar({
+            header: false,
+            defaultDate: "2022-03-22",
+            contentHeight: 800,
+            dayNamesShort: [
+                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+            ],
+            events: [
+            {
+                    title: '奶奶家',
+                    start: '2022-03-28',
+                    backgroundColor: '#C68CCF',
+                    borderColor: '#C68CCF'
+                }
+            ]    
+        });
+    });
+
+    
+    $("#roll").on( "click","div",function(){
+            var index=$(this).index();
+            console.log(index);
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+            $("#div>div").eq(index).addClass("show").siblings().removeClass("show");
+        });
+</script>
+
+</html>

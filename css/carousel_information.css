@@ -1,0 +1,208 @@
+/* card_information */
+
+body{
+    width: 100%;
+    height: 99%;
+    background-color: #F0F0F0;
+    border-color: aqua;
+    border-width: 3px;
+    border-style: hidden;
+}
+
+.grade_area>.card_position{
+    border-color: aqua;
+    border-width: 3px;
+    border-style: solid;
+    height: 100%;
+    display: flex;
+}
+
+.carousel-item{
+    margin-top: -2%;
+}
+
+.buttom_size{
+    background-color: #ffffff;
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 250px;
+    height: 250px;
+    border-color: #E5E5E5;
+    border-width:0.1mm;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.hover_color:hover{
+    background-color: #E5E5E5;
+    border-color: #E5E5E5;
+    border-width: 0.1mm;
+    border-style: solid;
+    border-radius: 10px;
+    transition-duration: 15ms;
+}
+
+.div_size{
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.pic_text_size{  
+    border-color: aqua;
+    border-width: 3px;
+    border-style: hidden;
+    color: black;
+    text-align: center;
+    height: 70%;
+    padding-top: 8vh;
+
+}
+.select2-results__option--highlighted {
+    background-color: #BADA55 !important;
+}
+
+/* card_grade */
+
+.information_area{
+    height: 20%;
+    border-color: #66ff00;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#select_div{
+    margin-top: 0%;
+    display: flex;
+    border-width: 3px;
+    width: 97%;
+    height: 70px;
+    border-color: red;
+    border-style: hidden;
+    margin-left: 2%;
+}
+
+#word{
+    margin-top: 20px;
+}
+
+.select_box {
+    width: 150px;
+    position: relative;
+    margin: 10px;
+    padding: 0;
+    font-size: 12px;
+}
+
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.select_box input {
+    cursor: pointer;
+    display: block;
+    line-height: 25px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.select_box ul {
+    width: 180px;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: hidden;
+    display: none;
+    background: #ebebeb;
+    z-index: 99999;
+}
+
+.select_box ul li {
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    padding-left: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hover {
+    background: #ccc;
+}
+
+#div>.show{
+    display: flex;
+}
+#div>div{
+    display: none;
+}
+
+.grade_area{
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myselect{
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 3px solid #E5E5E5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px #666;
+}
+
+
+.score_size{
+
+    border-color: red;
+    border-style: hidden;
+    border-width: 3px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#mid_line{
+    background: linear-gradient(to right, transparent, black, transparent);
+}
+
+hr {
+    border: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 1px;
+    background: linear-gradient(to right, transparent, black, transparent);
+}
+
+p{
+    margin-bottom: 5%;
+}
+
+/* carousel */
+
+.card_font{
+    font-size: 11pt;
+    color: #000000;
+}
+
+.check[type="checkbox"].filled-in:checked+span:not(.lever):after{
+    border: 2px solid #000000;
+    background-color: #0099ff;
+}

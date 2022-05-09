@@ -18,10 +18,11 @@ body{
 }
 
 .buttom_size{
+    background-color: #F0F0F0;
     margin-top: 5%;
     margin-left: 3%;
     width: 210px;
-    height: 28vh;
+    height: 210px;
     border-color: #E5E5E5;
     border-width:0.1mm;
     border-style: solid;
