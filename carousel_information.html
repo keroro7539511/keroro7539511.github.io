@@ -13,27 +13,36 @@
     </head>
     <header class="include" file="header.html">引入</header>
     <body>
+
+        <span id="tab-1">109學年第1學期</span>
+        <span id="tab-2">109學年第2學期</span>
+        <span id="tab-3">110學年第1學期</span>
+        <span id="tab-4">110學年第2學期</span>
+
         <div class="information_area">
 
         </div>
 
         <hr id="mid_line">
 
-        <div id="select_div">
-            <p id="word">請輸入您要查詢：</p>
-            <div class="select_box"><input id="myselect" type="text" value="109學年第1學期" readonly="readonly">
-                <ul class="select_ul" id="ul">
-                    <li class="active">109學年第1學期</li>
-                    <li>109學年第2學期</li>
-                    <li>110學年第1學期</li>
-                    <li>110學年第2學期</li>
-                </ul>
-            </div>
-        </div>
 
-        <div id="div" class="grade_area">
+        <div id="tab" class="grade_area">
+            <div id="select_div">
+                <p id="word">請輸入您要查詢：</p>
+                <div class="select_box"><input id="myselect" type="text" value="109學年第1學期" readonly="readonly">
+                    <ul class="select_ul" id="ul">
+                        <li class="active"><a href="#tab-1">109學年第1學期</a></li>
+                        <li><a href="#tab-2">109學年第2學期</a></li>
+                        <li><a href="#tab-3">110學年第1學期</a></li>
+                        <li><a href="#tab-4">110學年第2學期</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        
             <!--109學年第1學期-->
-            <div class="carousel card_position show w3-animate-opacity">
+            <div class="tab-content-1">
+            <div class="carousel card_position show w3-animate-opacity tab-content-1">
                 <a class="carousel-item">
                 <div class="buttom_size">
                     
@@ -124,18 +133,20 @@
                         
                 </div>
                 </a>
+            </div>
             </div>
             <!--109學年第2學期-->
-            <div class="carousel card_position w3-animate-opacity">
+            <div class="tab-content-2">
+            <div class="carousel card_position w3-animate-opacity tab-content-2">
                 <a class="carousel-item">
                 <div class="buttom_size">
                     
                         <div class="div_size ">
                             <div class="score_size">
                                 <img src="/icon/card_information/蒙版组 65.png"/>
-                                <p class="card_font">工業設計研究</p>
+                                <p class="card_font">工業設計專題</p>
                                 <hr>
-                                <p class="card_font">成績：82</p>
+                                <p class="card_font">成績：84</p>
                                 <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
                             </div>
                         </div>
@@ -148,9 +159,9 @@
                             <div class="div_size ">
                                 <div class="score_size">
                                     <img src="/icon/card_information/蒙版组 65.png"/>
-                                    <p class="card_font">專題研討（一）</p>
+                                    <p class="card_font">專題研討（二）</p>
                                     <hr>
-                                    <p class="card_font">成績：84</p>
+                                    <p class="card_font">成績：85</p>
                                     <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
                                 </div>
                             </div>
@@ -163,7 +174,22 @@
                             <div class="div_size ">
                                 <div class="score_size">
                                     <img src="/icon/card_information/蒙版组 65.png"/>
-                                    <p class="card_font">認知心理研究</p>
+                                    <p class="card_font">產品創新與管理專論</p>
+                                    <hr>
+                                    <p class="card_font">成績：90</p>
+                                    <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
+                                </div>
+                            </div>
+                        
+                </div>
+                </a>
+                <a class="carousel-item">
+                <div class="buttom_size">
+                        
+                            <div class="div_size ">
+                                <div class="score_size">
+                                    <img src="/icon/card_information/蒙版组 65.png"/>
+                                    <p class="card_font">研究導讀（二)</p>
                                     <hr>
                                     <p class="card_font">成績：88</p>
                                     <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
@@ -178,24 +204,9 @@
                             <div class="div_size ">
                                 <div class="score_size">
                                     <img src="/icon/card_information/蒙版组 65.png"/>
-                                    <p class="card_font">設計實務研究（一）</p>
+                                    <p class="card_font">設計實務研究（二）</p>
                                     <hr>
                                     <p class="card_font">成績：88</p>
-                                    <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
-                                </div>
-                            </div>
-                        
-                </div>
-                </a>
-                <a class="carousel-item">
-                <div class="buttom_size">
-                        
-                            <div class="div_size ">
-                                <div class="score_size">
-                                    <img src="/icon/card_information/蒙版组 65.png"/>
-                                    <p class="card_font">環境行為研究</p>
-                                    <hr>
-                                    <p class="card_font">成績：82</p>
                                     <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
                                 </div>
                             </div>
@@ -218,17 +229,19 @@
                 </div>
                 </a>
             </div>
+            </div>
             <!--110學年第1學期-->
-            <div class="carousel card_position w3-animate-opacity">
+            <div class="tab-content-3">
+            <div class="carousel card_position w3-animate-opacity tab-content-3">
                 <a class="carousel-item">
                 <div class="buttom_size">
                     
                         <div class="div_size ">
                             <div class="score_size">
                                 <img src="/icon/card_information/蒙版组 65.png"/>
-                                <p class="card_font">工業設計研究</p>
+                                <p class="card_font">專技英文閱讀</p>
                                 <hr>
-                                <p class="card_font">成績：82</p>
+                                <p class="card_font">成績：72</p>
                                 <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
                             </div>
                         </div>
@@ -241,9 +254,9 @@
                             <div class="div_size ">
                                 <div class="score_size">
                                     <img src="/icon/card_information/蒙版组 65.png"/>
-                                    <p class="card_font">專題研討（一）</p>
+                                    <p class="card_font">設計管理與實務特論</p>
                                     <hr>
-                                    <p class="card_font">成績：84</p>
+                                    <p class="card_font">成績：86</p>
                                     <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
                                 </div>
                             </div>
@@ -251,23 +264,26 @@
                 </div>
                 </a>
             </div>
+            </div>
             <!--110學年第2學期-->
-            <div class=" card_position w3-animate-opacity">
+            <div class="tab-content-4">
+            <div class="card_position w3-animate-opacity tab-content-4">
                 <a class="carousel-item">
                 <div class="buttom_size">
                     
                         <div class="div_size ">
                             <div class="score_size">
                                 <img src="/icon/card_information/蒙版组 65.png"/>
-                                <p class="card_font">工業設計研究</p>
+                                <p class="card_font">碩士論文</p>
                                 <hr>
-                                <p class="card_font">成績：82</p>
+                                <p class="card_font">成績：90</p>
                                 <label class="card_font"><input type="checkbox" class="filled-in check"><span>確認成績</span></label>
                             </div>
                         </div>
                     
                 </div>
                 </a>
+            </div>
             </div>
         </div>
             
@@ -281,14 +297,6 @@
                     $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
                 })
             }
-        });
-
-        $("#ul").on( "click","li",function(){
-            var index=$(this).index();
-            console.log(index);
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-            $("#div>div").eq(index).addClass("show").siblings().removeClass("show");
         });
 
         $(document).ready(function () {

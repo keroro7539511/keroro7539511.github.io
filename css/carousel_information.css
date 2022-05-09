@@ -143,13 +143,6 @@ li {
     background: #ccc;
 }
 
-#div>.show{
-    display: flex;
-}
-#div>div{
-    display: none;
-}
-
 .grade_area{
     border-color: #000000;
     border-width: 1px;
@@ -193,6 +186,43 @@ hr {
 
 p{
     margin-bottom: 5%;
+}
+
+#tab > .tab-content-1{
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#tab > .tab-content-2{
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#tab > .tab-content-3{
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#tab > .tab-content-4{
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+span ~ #tab > .tabb:first-of-type,
+#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3,
+#tab-4:target ~ #tab > div.tab-content-4 {
+    width: 100%;
+    visibility: visible;
+}
+
+span{
+    display: none;
 }
 
 /* carousel */
