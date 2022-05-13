@@ -16,7 +16,7 @@ body{
 }
 
 .right_part{
-    width:75%; height:80%; float:left; display:inline;
+    width:75%; height:70%; float:left; display:inline;
     border-color: blue;
     border-width: 5px;
     border-style: hidden;
@@ -30,7 +30,7 @@ p{
 
 #roll{
     width: 100%;
-    height: 40%;
+    height: 50%;
     border-color: pink;
     border-width: 5px;
     border-style: hidden;
@@ -40,10 +40,10 @@ p{
 .div_shape{
     align-items: center;
     width: 80%;
-    height: 20%;
-    border-color: #E5E5E5;
+    height: 17%;
+    border-color: #B0B0B0;
     border-width:0.1mm;
-    border-style: hidden;
+    border-style: solid;
     border-radius: 10px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
     margin-top: 5%;
@@ -127,6 +127,7 @@ input{
 #date_div{
     margin-top: 2%;
     margin-left: 6%;
+    margin-bottom: 5%;
 }
 
 
@@ -227,4 +228,17 @@ width: 100%;
     border-style: hidden;
     width: 84%;
     margin-left: 40px;
+}
+
+
+#p{
+    margin-top: 5%;
+}
+
+#pic{
+    margin-top: 5%;
+    width: 80%;
+}
+
+#calendar1{
 }
