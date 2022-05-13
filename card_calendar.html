@@ -29,8 +29,8 @@
                      <div class="modal-body">
                          <div class="text_save_div">
                              <img id="x" src="/icon/menu/紅色/蒙版组 9.png"/>
-                             <input type="text" class="text" id="title" placeholder="新增標題" onclick="click_title()"/>
-                             <img id="save" src="/icon/menu/紅色/组 754.png" data-bs-dismiss="modal" />
+                             <input type="text" class="text" id="title" placeholder="新增標題"/>
+                             <img id="save" src="/icon/menu/紅色/组 754.png" data-bs-dismiss="modal"/>
                          </div>
                          <div id="date_div">
                              <input type="date" value="2022-03-17" class="date"/>
@@ -138,6 +138,15 @@
             })
         }
     });
+
+    var event = {
+        
+                    title: "1111",
+                    start: "2022-03-26",
+                    backgroundColor: "#F27D8D",
+                    borderColor: "#F27D8D",
+                    className: 'hide',
+    };
 
     document.addEventListener("DOMContentLoaded", function () {
         var calendarEl = document.getElementById("calendar1");
@@ -265,13 +274,6 @@
                     borderColor: "#F27D8D",
                     className: 'red',
                 },
-                {
-                    title: "1111",
-                    start: "2022-03-26",
-                    backgroundColor: "#F27D8D",
-                    borderColor: "#F27D8D",
-                    className: 'hide',
-                },
 
                 {
                     title: "奶奶家",
@@ -281,13 +283,17 @@
                     className: 'purple',
                 },
             ],
-
             
         });
+        
+        document.getElementById('save').onclick = function(){
+            calendar1.addEvent(event);
+        }
+
+
         calendar1.render();
 
     });
-
 
 
 
@@ -305,12 +311,7 @@
             $('.red').css('display', 'block');
             $('.blue').css('display', 'block');
             $('.purple').css('display', 'block');
-            
-            calendar1.addEvent({
-                    title: '1111',
-                    start: '2022-03-26',
-                    backgroundColor: 'red',
-                });
+     
         }
         if(index == 1){
             $('.yellow').css('display', 'block');
@@ -368,10 +369,6 @@
         });
 
 
-    function click_title(){
-        document.getElementById('title').value = '1111';
-        document.getElementById('title').disabled = true;
-    }
 
 </script>
 
