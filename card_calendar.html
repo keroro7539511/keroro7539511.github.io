@@ -29,7 +29,7 @@
                      <div class="modal-body">
                          <div class="text_save_div">
                              <img id="x" src="/icon/menu/紅色/蒙版组 9.png"/>
-                             <input type="text" class="text" id="title" placeholder="新增標題"/>
+                             <input type="text" class="text" id="title" placeholder="新增標題" onclick="click_title()"/>
                              <img id="save" src="/icon/menu/紅色/组 754.png" data-bs-dismiss="modal"/>
                          </div>
                          <div id="date_div">
@@ -38,56 +38,56 @@
                              <input type="date" value="2022-03-17" class="date"/>
                          </div>
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 10.png" class="img"/>
+                            <img id="member" src="/icon/menu/紅色/蒙版组 10.png" class="img"/>
                             <input type="text" class="form_size" placeholder="成員" disabled />
                          </div>
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 11.png" class="img"/>
+                            <img id="research" src="/icon/menu/紅色/蒙版组 11.png" class="img"/>
    
                             <div class="select_box"><input id="myselect" type="text" value="研究室" readonly="readonly">
                                 <ul class="select_ul " id="ul">
-                                    <li class="active">研究室</li>
-                                    <li>設計方法</li>
-                                    <li>使用者介面設計</li>
+                                    <li class="li" class="active" value="研究室">研究室</li>
+                                    <li class="li" value="設計方法">設計方法</li>
+                                    <li class="li" value="使用者介面設計">使用者介面設計</li>
                                 </ul>
                             </div>  
                          </div>
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 12.png" class="img"/>
+                            <img id="alert" src="/icon/menu/紅色/蒙版组 12.png" class="img"/>
    
                             <div class="select_box"><input id="myselect" type="text" value="無通知" readonly="readonly">
-                                <ul class="select_ul " id="ul">
+                                <ul class="select_ul ">
                                     <li class="active">無通知</li>
                                 </ul>
                             </div>  
                          </div>
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 13.png" class="img"/>
+                            <img id='repeat' src="/icon/menu/紅色/蒙版组 13.png" class="img"/>
    
                             <div class="select_box"><input id="myselect" type="text" value="無重複" readonly="readonly">
-                                <ul class="select_ul " id="ul">
+                                <ul class="select_ul ">
                                     <li class="active">無重複</li>
                                 </ul>
                             </div>  
                          </div>
                          
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 14.png" class="img"/>
+                            <img id="link" src="/icon/menu/紅色/蒙版组 14.png" class="img"/>
                             <input type="text" class="form_size" placeholder="網址" disabled />
                          </div>
                          
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/组 28.png" class="img"/>
+                            <img id="position" src="/icon/menu/紅色/组 28.png" class="img"/>
                             <input type="text" class="form_size" placeholder="地點" disabled />
                          </div>
                          
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 16.png" class="img"/>
+                            <img id="note" src="/icon/menu/紅色/蒙版组 16.png" class="img"/>
                             <input type="text" class="form_size" placeholder="備註" disabled />
                          </div>
                          
                          <div class="text_save_div">
-                            <img src="/icon/menu/紅色/蒙版组 17.png" class="img"/>
+                            <img id="list" src="/icon/menu/紅色/蒙版组 17.png" class="img"/>
                             <input type="text" class="form_size" placeholder="待辦清單" disabled />
                          </div>
                      </div>
@@ -145,7 +145,7 @@
                     start: "2022-03-26",
                     backgroundColor: "#F27D8D",
                     borderColor: "#F27D8D",
-                    className: 'hide',
+                    className: 'red',
     };
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -366,9 +366,52 @@
                 }
             })
 
+            $(".li").click(function(){
+                if($(this).index() == 0){
+                    $('#member').attr('src', '/icon/menu/紅色/蒙版组 10.png');
+                    $('#research').attr('src', '/icon/menu/紅色/蒙版组 11.png');
+                    $('#alert').attr('src', '/icon/menu/紅色/蒙版组 12.png');
+                    $('#repeat').attr('src', '/icon/menu/紅色/蒙版组 13.png');
+                    $('#link').attr('src', '/icon/menu/紅色/蒙版组 14.png');
+                    $('#position').attr('src', '/icon/menu/紅色/组 28.png');
+                    $('#note').attr('src', '/icon/menu/紅色/蒙版组 16.png');
+                    $('#list').attr('src', '/icon/menu/紅色/蒙版组 17.png');
+                    $('#save').attr('src', '/icon/menu/紅色/组 754.png');
+                    $('#x').attr('src', '/icon/menu/紅色/蒙版组 9.png');
+                }
+                
+                if($(this).index() == 1){
+                    $('#member').attr('src', '/icon/menu/綠色/蒙版组 10.png');
+                    $('#research').attr('src', '/icon/menu/綠色/蒙版组 11.png');
+                    $('#alert').attr('src', '/icon/menu/綠色/蒙版组 12.png');
+                    $('#repeat').attr('src', '/icon/menu/綠色/蒙版组 13.png');
+                    $('#link').attr('src', '/icon/menu/綠色/蒙版组 14.png');
+                    $('#position').attr('src', '/icon/menu/綠色/组 28.png');
+                    $('#note').attr('src', '/icon/menu/綠色/蒙版组 16.png');
+                    $('#list').attr('src', '/icon/menu/綠色/蒙版组 17.png');
+                    $('#save').attr('src', '/icon/menu/綠色/组 10.png');
+                    $('#x').attr('src', '/icon/menu/綠色/蒙版组 9.png');
+                }
+                if($(this).index() == 2){
+                    $('#member').attr('src', '/icon/menu/黃色/蒙版组 10.png');
+                    $('#research').attr('src', '/icon/menu/黃色/蒙版组 11.png');
+                    $('#alert').attr('src', '/icon/menu/黃色/蒙版组 12.png');
+                    $('#repeat').attr('src', '/icon/menu/黃色/蒙版组 13.png');
+                    $('#link').attr('src', '/icon/menu/黃色/蒙版组 14.png');
+                    $('#position').attr('src', '/icon/menu/黃色/组 28.png');
+                    $('#note').attr('src', '/icon/menu/黃色/蒙版组 16.png');
+                    $('#list').attr('src', '/icon/menu/黃色/蒙版组 17.png');
+                    $('#save').attr('src', '/icon/menu/黃色/组 10.png');
+                    $('#x').attr('src', '/icon/menu/黃色/蒙版组 9.png');
+                }
+            });
+
         });
 
-
+        function click_title(){
+        document.getElementById('title').value = '1111';
+        document.getElementById('title').disabled = true;
+    }
 
 </script>
 
