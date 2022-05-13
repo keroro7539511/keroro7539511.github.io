@@ -1,0 +1,282 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/list_calendar.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Moment.js v2.20.0 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
+    <!-- FullCalendar v3.8.1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+    <script src="/js/locales-all.min.js"></script>
+</head>
+<header class="include" file="header.html">引入</header>
+
+
+<body>
+    <div id="left_part">
+        <a><img src="/icon/card_calendar/组 10.png" /></a>
+        <img src="/icon/card_calendar/新日期.png">
+        <p>行事曆清單（５）</p>
+        <div id="roll">
+            <div class="div_shape active">
+                <img class="img_position" src="/icon/card_calendar/1_所有行事曆.png" />
+            </div>
+            <div class="div_shape">
+                <img class="img_position" src="/icon/card_calendar/2_使者介面設計.png" />
+            </div>
+            <div class="div_shape">
+                <img class="img_position" src="/icon/card_calendar/3_設計方法.png" />
+            </div>
+            <div class="div_shape">
+                <img class="img_position" src="/icon/card_calendar/4_研究室.png" />
+            </div>
+            <div class="div_shape">
+                <img class="img_position" src="/icon/card_calendar/5_個人行程.png" />
+            </div>
+            <div class="div_shape">
+                <img class="img_position" src="/icon/card_calendar/6_家族行程.png">
+            </div>
+            <div class="div_shape">
+                <img class="img_position" src="/icon/card_calendar/7_新增行事曆.png">
+            </div>
+        </div>
+    </div>
+    <div class="right_part" id="div">
+        <div id="calendar1" class="canlendar show"></div>
+    </div>
+</body>
+
+
+<script>
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+            })
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar1");
+        var calendar1 = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            initialDate: "2022-03-22",
+            contentHeight: 700,
+            aspectRatio: 1,
+            locale: 'zh-tw',
+            headerToolbar: false,
+            events: [
+                {
+                    title: "助教",
+                    start: "2022-03-04",
+                    textColor: '#FFCF52',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'yellow',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-11",
+                    textColor: '#FFCF52',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'yellow',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-18",
+                    textColor: '#FFCF52',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'yellow',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-25",
+                    textColor: '#FFCF52',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'yellow',
+                },
+
+                {
+                    title: "節日",
+                    start: "2022-03-14",
+                    textColor: '#00CAF1',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'blue',
+                },
+                {
+                    title: "出差",
+                    start: "2022-03-22",
+                    textColor: '#00CAF1',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'blue',
+                },
+
+                {
+                    title: "聚餐",
+                    start: "2022-03-25",
+                    textColor: '#00CAF1',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'blue',
+                },
+
+                {
+                    title: "出差",
+                    start: "2022-03-29",
+                    textColor: '#00CAF1',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'blue',
+                },
+
+                {
+                    title: "工作坊",
+                    start: "2022-03-18",
+                    textColor: '#91DA72',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'green',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-16",
+                    textColor: '#91DA72',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'green',
+                },
+                {
+                    title: "助教",
+                    start: "2022-03-23",
+                    textColor: '#91DA72',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'green',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-30",
+                    textColor: '#91DA72',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'green',
+                },
+
+                {
+                    title: "開會",
+                    start: "2022-03-18",
+                    textColor: '#F27D8D',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'red',
+                },
+
+                {
+                    title: "開會",
+                    start: "2022-03-25",
+                    textColor: '#F27D8D',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'red',
+                },
+
+                {
+                    title: "開會",
+                    start: "2022-03-30",
+                    textColor: '#F27D8D',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'red',
+                },
+
+                {
+                    title: "奶奶家",
+                    start: "2022-03-28",
+                    textColor: '#C68CCF',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'purple',
+                },
+            ],
+
+            
+        });
+        calendar1.render();
+
+    });
+
+
+
+
+
+
+
+    $("#roll").on("click", "div", function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#div>div").eq(index).addClass("show").siblings().removeClass("show");
+        if(index == 0){
+            $('.yellow').css('display', 'block');
+            $('.green').css('display', 'block');
+            $('.red').css('display', 'block');
+            $('.blue').css('display', 'block');
+            $('.purple').css('display', 'block');
+        }
+        if(index == 1){
+            $('.yellow').css('display', 'block');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 2){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'block');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 3){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'block');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 4){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'block');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 5){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'block');
+        }
+    });
+
+    var roll = document.getElementById('roll');
+
+
+</script>
+
+</html>

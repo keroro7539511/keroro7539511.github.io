@@ -5,21 +5,98 @@
     <link rel="stylesheet" href="/css/common.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Moment.js v2.20.0 -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
     <!-- FullCalendar v3.8.1 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.print.css" rel="stylesheet"
-        media="print">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.1/fullcalendar.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+    <script src="/js/locales-all.min.js"></script>
 </head>
 <header class="include" file="header.html">引入</header>
 
 
 <body>
     <div id="left_part">
-        <a><img src="/icon/card_calendar/组 10.png" /></a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#newEvent"><img src="/icon/card_calendar/组 10.png" /></a>
+        
+        <div class="modal fade" id="newEvent">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                     <div class="modal-body">
+                         <div class="text_save_div">
+                             <img id="x" src="/icon/menu/紅色/蒙版组 9.png"/>
+                             <input type="text" class="text" id="title" placeholder="新增標題" onclick="click_title()"/>
+                             <img id="save" src="/icon/menu/紅色/组 754.png" data-bs-dismiss="modal" />
+                         </div>
+                         <div id="date_div">
+                             <input type="date" value="2022-03-17" class="date"/>
+                             <label>到</label>
+                             <input type="date" value="2022-03-17" class="date"/>
+                         </div>
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 10.png" class="img"/>
+                            <input type="text" class="form_size" placeholder="成員" disabled />
+                         </div>
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 11.png" class="img"/>
+   
+                            <div class="select_box"><input id="myselect" type="text" value="研究室" readonly="readonly">
+                                <ul class="select_ul " id="ul">
+                                    <li class="active">研究室</li>
+                                    <li>設計方法</li>
+                                    <li>使用者介面設計</li>
+                                </ul>
+                            </div>  
+                         </div>
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 12.png" class="img"/>
+   
+                            <div class="select_box"><input id="myselect" type="text" value="無通知" readonly="readonly">
+                                <ul class="select_ul " id="ul">
+                                    <li class="active">無通知</li>
+                                </ul>
+                            </div>  
+                         </div>
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 13.png" class="img"/>
+   
+                            <div class="select_box"><input id="myselect" type="text" value="無重複" readonly="readonly">
+                                <ul class="select_ul " id="ul">
+                                    <li class="active">無重複</li>
+                                </ul>
+                            </div>  
+                         </div>
+                         
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 14.png" class="img"/>
+                            <input type="text" class="form_size" placeholder="網址" disabled />
+                         </div>
+                         
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/组 28.png" class="img"/>
+                            <input type="text" class="form_size" placeholder="地點" disabled />
+                         </div>
+                         
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 16.png" class="img"/>
+                            <input type="text" class="form_size" placeholder="備註" disabled />
+                         </div>
+                         
+                         <div class="text_save_div">
+                            <img src="/icon/menu/紅色/蒙版组 17.png" class="img"/>
+                            <input type="text" class="form_size" placeholder="待辦清單" disabled />
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
         <img src="/icon/card_calendar/新日期.png">
         <p>行事曆清單（５）</p>
         <div id="roll">
@@ -48,11 +125,6 @@
     </div>
     <div class="right_part" id="div">
         <div id="calendar1" class="canlendar show"></div>
-        <div id="calendar2" class="canlendar"></div>
-        <div id="calendar3" class="canlendar"></div>
-        <div id="calendar4" class="canlendar"></div>
-        <div id="calendar5" class="canlendar"></div>
-        <div id="calendar6" class="canlendar"></div>
     </div>
 </body>
 
@@ -67,300 +139,240 @@
         }
     });
 
-    $(document).ready(function () {
-        $('#calendar1').fullCalendar({
-            header: false,
-            defaultDate: "2022-03-22",
-            dayNamesShort: [
-                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
-            ],
+    document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar1");
+        var calendar1 = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            initialDate: "2022-03-22",
             contentHeight: 700,
             aspectRatio: 1,
+            locale: 'zh-tw',
+            headerToolbar: false,
             events: [
                 {
-                    title: '助教',
-                    start: '2022-03-04',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-11',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-18',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
+                    title: "助教",
+                    start: "2022-03-04",
+                    backgroundColor: "#FFCF52",
+                    borderColor: "#FFCF52",
+                    className: 'yellow',
                 },
 
                 {
-                    title: '助教',
-                    start: '2022-03-25',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
+                    title: "助教",
+                    start: "2022-03-11",
+                    backgroundColor: "#FFCF52",
+                    borderColor: "#FFCF52",
+                    className: 'yellow',
                 },
 
                 {
-                    title: '節日',
-                    start: '2022-03-14',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                {
-                    title: '出差',
-                    start: '2022-03-22',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                
-                {
-                    title: '聚餐',
-                    start: '2022-03-25',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                
-                {
-                    title: '出差',
-                    start: '2022-03-29',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                
-                {
-                    title: '工作坊',
-                    start: '2022-03-18',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-16',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                },
-                {
-                    title: '助教',
-                    start: '2022-03-23',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-30',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                },
-                
-                {
-                    title: '開會',
-                    start: '2022-03-18',
-                    backgroundColor: '#F27D8D',
-                    borderColor: '#F27D8D'
-                },
-                
-                {
-                    title: '開會',
-                    start: '2022-03-25',
-                    backgroundColor: '#F27D8D',
-                    borderColor: '#F27D8D'
-                },
-                
-                {
-                    title: '開會',
-                    start: '2022-03-30',
-                    backgroundColor: '#F27D8D',
-                    borderColor: '#F27D8D'
-                },
-                
-                
-                {
-                    title: '奶奶家',
-                    start: '2022-03-28',
-                    backgroundColor: '#C68CCF',
-                    borderColor: '#C68CCF'
-                }
-            ]
-        });
-        $('#calendar2').fullCalendar({
-            header: false,
-            defaultDate: "2022-03-22",
-            contentHeight: 700,
-            height: 900,
-            dayNamesShort: [
-                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
-            ],
-            events: [
-                {
-                    title: '助教',
-                    start: '2022-03-04',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-11',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-18',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
+                    title: "助教",
+                    start: "2022-03-18",
+                    backgroundColor: "#FFCF52",
+                    borderColor: "#FFCF52",
+                    className: 'yellow',
                 },
 
                 {
-                    title: '助教',
-                    start: '2022-03-25',
-                    backgroundColor: '#FFCF52',
-                    borderColor: '#FFCF52'
-                }
-            ]
-        
-        });
-        $('#calendar3').fullCalendar({
-            header: false,
-            defaultDate: "2022-03-22",
-            contentHeight: 700,
-            height: 900,
-            dayNamesShort: [
-                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
-            ],
-            events: [
-            {
-                    title: '工作坊',
-                    start: '2022-03-18',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
+                    title: "助教",
+                    start: "2022-03-25",
+                    backgroundColor: "#FFCF52",
+                    borderColor: "#FFCF52",
+                    className: 'yellow',
                 },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-16',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                },
-                {
-                    title: '助教',
-                    start: '2022-03-23',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                },
-                
-                {
-                    title: '助教',
-                    start: '2022-03-30',
-                    backgroundColor: '#91DA72',
-                    borderColor: '#91DA72'
-                }
-            ]
 
-        });
-        $('#calendar4').fullCalendar({
-            header: false,
-            defaultDate: "2022-03-22",
-            contentHeight: 700,
-            height: 900,
-            dayNamesShort: [
-                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
+                {
+                    title: "節日",
+                    start: "2022-03-14",
+                    backgroundColor: "#00CAF1",
+                    className: 'blue',
+                },
+                {
+                    title: "出差",
+                    start: "2022-03-22",
+                    backgroundColor: "#00CAF1",
+                    borderColor: "#00CAF1",
+                    className: 'blue',
+                },
+
+                {
+                    title: "聚餐",
+                    start: "2022-03-25",
+                    backgroundColor: "#00CAF1",
+                    borderColor: "#00CAF1",
+                    className: 'blue',
+                },
+
+                {
+                    title: "出差",
+                    start: "2022-03-29",
+                    backgroundColor: "#00CAF1",
+                    borderColor: "#00CAF1",
+                    className: 'blue',
+                },
+
+                {
+                    title: "工作坊",
+                    start: "2022-03-18",
+                    backgroundColor: "#91DA72",
+                    borderColor: "#91DA72",
+                    className: 'green',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-16",
+                    backgroundColor: "#91DA72",
+                    borderColor: "#91DA72",
+                    className: 'green',
+                },
+                {
+                    title: "助教",
+                    start: "2022-03-23",
+                    backgroundColor: "#91DA72",
+                    borderColor: "#91DA72",
+                    className: 'green',
+                },
+
+                {
+                    title: "助教",
+                    start: "2022-03-30",
+                    backgroundColor: "#91DA72",
+                    borderColor: "#91DA72",
+                    className: 'green',
+                },
+
+                {
+                    title: "開會",
+                    start: "2022-03-18",
+                    backgroundColor: "#F27D8D",
+                    borderColor: "#F27D8D",
+                    className: 'red',
+                },
+
+                {
+                    title: "開會",
+                    start: "2022-03-25",
+                    backgroundColor: "#F27D8D",
+                    borderColor: "#F27D8D",
+                    className: 'red',
+                },
+
+                {
+                    title: "開會",
+                    start: "2022-03-30",
+                    backgroundColor: "#F27D8D",
+                    borderColor: "#F27D8D",
+                    className: 'red',
+                },
+                {
+                    title: "1111",
+                    start: "2022-03-26",
+                    backgroundColor: "#F27D8D",
+                    borderColor: "#F27D8D",
+                    className: 'hide',
+                },
+
+                {
+                    title: "奶奶家",
+                    start: "2022-03-28",
+                    backgroundColor: "#C68CCF",
+                    borderColor: "#C68CCF",
+                    className: 'purple',
+                },
             ],
-            events: [
-            {
-                    title: '開會',
-                    start: '2022-03-18',
-                    backgroundColor: '#F27D8D',
-                    borderColor: '#F27D8D'
-                },
-                
-                {
-                    title: '開會',
-                    start: '2022-03-25',
-                    backgroundColor: '#F27D8D',
-                    borderColor: '#F27D8D'
-                },
-                
-                {
-                    title: '開會',
-                    start: '2022-03-30',
-                    backgroundColor: '#F27D8D',
-                    borderColor: '#F27D8D'
-                }
-            ]
+
+            
         });
-        $('#calendar5').fullCalendar({
-            header: false,
-            defaultDate: "2022-03-22",
-            contentHeight: 700,
-            height: 900,
-            dayNamesShort: [
-                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
-            ],
-            events: [
-            {
-                    title: '節日',
-                    start: '2022-03-14',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                {
-                    title: '出差',
-                    start: '2022-03-22',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                
-                {
-                    title: '聚餐',
-                    start: '2022-03-25',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                },
-                
-                {
-                    title: '出差',
-                    start: '2022-03-29',
-                    backgroundColor: '#00CAF1',
-                    borderColor: '#00CAF1'
-                }
-            ]
-        });
-        $('#calendar6').fullCalendar({
-            header: false,
-            defaultDate: "2022-03-22",
-            contentHeight: 700,
-            height: 900,
-            dayNamesShort: [
-                '週一', '週二', '週三', '週四', '週五', '週六', '週日'
-            ],
-            events: [
-            {
-                    title: '奶奶家',
-                    start: '2022-03-28',
-                    backgroundColor: '#C68CCF',
-                    borderColor: '#C68CCF'
-                }
-            ]    
-        });
+        calendar1.render();
+
     });
 
-    
-    $("#roll").on( "click","div",function(){
-            var index=$(this).index();
-            console.log(index);
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-            $("#div>div").eq(index).addClass("show").siblings().removeClass("show");
+
+
+
+
+
+
+    $("#roll").on("click", "div", function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#div>div").eq(index).addClass("show").siblings().removeClass("show");
+        if(index == 0){
+            $('.yellow').css('display', 'block');
+            $('.green').css('display', 'block');
+            $('.red').css('display', 'block');
+            $('.blue').css('display', 'block');
+            $('.purple').css('display', 'block');
+            
+            calendar1.addEvent({
+                    title: '1111',
+                    start: '2022-03-26',
+                    backgroundColor: 'red',
+                });
+        }
+        if(index == 1){
+            $('.yellow').css('display', 'block');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 2){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'block');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 3){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'block');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 4){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'block');
+            $('.purple').css('display', 'none');
+        }
+        if(index == 5){
+            $('.yellow').css('display', 'none');
+            $('.green').css('display', 'none');
+            $('.red').css('display', 'none');
+            $('.blue').css('display', 'none');
+            $('.purple').css('display', 'block');
+        }
+
+    });
+
+    $(document).ready(function () {
+            $(".select_box input").click(function () {
+                var thisinput = $(this);
+                var thisul = $(this).parent().find("ul");
+                if (thisul.css("display") == "none") {
+                    if (thisul.height() > 200) { thisul.css({ height: "200px", "overflow-y": "scroll" }) };
+                    thisul.fadeIn("100");
+                    thisul.hover(function () { }, function () { thisul.fadeOut("100"); })
+                    thisul.find("li").click(function () { thisinput.val($(this).text()); thisul.fadeOut("100"); }).hover(function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); });
+                }
+                else {
+                    thisul.fadeOut("fast");
+                }
+            })
+
         });
+
+
+    function click_title(){
+        document.getElementById('title').value = '1111';
+        document.getElementById('title').disabled = true;
+    }
+
 </script>
 
 </html>
