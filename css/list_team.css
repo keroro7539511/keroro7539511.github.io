@@ -1,0 +1,148 @@
+ul{
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.body{
+    display: flex;
+    margin-top: 1.2%;
+    height: 870px;
+    border-width: 3px;
+    border-style: hidden;
+    border-color: blue;
+    font-size: 110%;
+    color: black;
+}
+
+.side_bar{
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    padding-top: 1%;
+    box-shadow: 1px 0px 5px 0px #c9c9c9;
+    z-index: 10;
+}
+
+table{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-style: hidden;
+    border-color: rgb(165, 37, 154);
+}
+
+td{
+    border-style: hidden;
+    border-color: rgb(58, 37, 56);
+}
+
+.hover_style:hover{
+    background-color: #E5E5E5;
+    transition-duration: 90ms;
+}
+
+.point{
+    height: 0%;
+    width: 30%;
+    margin-left: 30%;
+}
+
+.point-t{
+    width: 10%;
+}
+
+.block{
+    height: 40px;
+    width: 40px;
+    border-radius: 15%;
+}
+
+.block-t{
+    width: 0%;
+}
+
+.list{
+    margin-top: 1.6%;
+    padding-left: 3%;
+}
+
+.dot{
+    margin-top: 4%;
+    height: 0%;
+}
+
+.dot-t{
+    width: 10%;
+}
+
+.head_bar{
+    background-color: rgb(255, 255, 255);
+    height: 8%;
+    width: 80%;
+    padding-top: 2%;
+    margin-left: 1%;
+    display: flex;
+    box-shadow: 5px 2px 5px 0px #c9c9c9;
+    z-index: 5;
+}
+
+#head_block{
+    height: 40px;
+    width: 50px;
+    border-radius: 15%;
+    margin-top: -0.5%;
+    margin-left: 3%;
+}
+
+p{
+    border-style: hidden;
+    border-color: rgb(255, 135, 55);
+    width: 10%;
+    margin-left: 1%;
+}
+
+.head_bar ul{
+    border-style: hidden;
+    border-color: rgb(141, 58, 3);
+    display: flex;
+    width: 100%;
+    margin-left: 3%;
+}
+
+.head_bar li{
+    border-style: solid;
+    border-color: rgb(221, 101, 21);
+    display: flex;
+    height: 50%;
+    width: 12%;
+    margin-right: 5%;
+    padding-bottom: 2.2%;
+}
+
+.buttom{
+    margin-left: -50%;
+    margin-top: 40%;
+    height: 20%;
+    width: 100%;
+    background-color: #FFCF52;
+    border-style: solid;
+    border-color: #FFCF52;
+    border-width: 2px;
+    border-radius: 20%;
+}
+
+.head_img{
+    margin-top: -5%;
+    height: max-content;
+    width: 25%;
+    padding-right: 5%;
+}
+
+.content{
+    margin-top: 5.5%;
+    margin-left: -79.2%;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}

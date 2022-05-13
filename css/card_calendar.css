@@ -1,5 +1,4 @@
-
-body{
+body {
     width: 100%;
     height: 95%;
     border-color: red;
@@ -7,89 +6,88 @@ body{
     border-style: hidden;
 }
 
-#left_part{
-    width:15%; height:70%; float:left; display:inline;
+#left_part {
+    width: 15%;
+    height: 70%;
+    float: left;
+    display: inline;
     border-color: blueviolet;
     border-width: 5px;
     border-style: hidden;
     margin-left: 2%;
 }
 
-.right_part{
-    width:75%; height:70%; float:left; display:inline;
+.right_part {
+    width: 75%;
+    height: 70%;
+    float: left;
+    display: inline;
     border-color: blue;
     border-width: 5px;
     border-style: hidden;
-    overflow:auto;
+    overflow: auto;
 }
 
-p{
+p {
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-#roll{
+#roll {
     width: 100%;
     height: 50%;
     border-color: pink;
     border-width: 5px;
     border-style: hidden;
-    overflow:auto;
+    overflow: auto;
 }
 
-.div_shape{
+.div_shape {
     align-items: center;
     width: 80%;
     height: 17%;
-    border-color: #B0B0B0;
-    border-width:0.1mm;
-    border-style: solid;
+    border-width: 0.1mm;
+    border-style: hidden;
     border-radius: 10px;
-    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
     margin-top: 5%;
 }
 
-#roll::-webkit-scrollbar{
+#roll::-webkit-scrollbar {
     display: none;
 }
 
-.img_position{
-    margin-top: 4%;
-    margin-left: 5%;
-}
 
-.right_part::-webkit-scrollbar{
+.right_part::-webkit-scrollbar {
     display: none;
 }
 
-#div>.show{
+#div>.show {
     opacity: 1;
     z-index: 1;
 }
-#div>div{
+
+#div>div {
     opacity: 0;
     z-index: -1;
 }
 
-.canlendar{
-    position:absolute;
+.canlendar {
+    position: absolute;
     width: 75%;
 }
 
-.active{
-    background-color: #E5E5E5;
-}
 
 
-.fc-col-header-cell-cushion, .fc-daygrid-day-number{
+.fc-col-header-cell-cushion,
+.fc-daygrid-day-number {
     color: black;
 }
 
-.modal-content{
+.modal-content {
     height: 80%;
 }
 
-.text_save_div{
+.text_save_div {
     width: 90%;
     height: 10%;
     border-color: blue;
@@ -100,38 +98,42 @@ p{
     margin-left: 5%;
 }
 
-#x{
+#x {
     height: 15px;
     width: 15px;
 }
 
 
-.text{
+.text {
     width: 65%;
     margin-left: 3%;
     padding-bottom: 1%;
     border-color: #F27D8D;
+    background-color: white;
 }
 
-input{
+input {
+    padding-left: 4%;
     width: 25%;
+    height: 40px;
     margin-left: 5%;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
     border-width: 1px;
-    background-color: white;
+    background-color: #E5E5E5;
+
 
 }
 
-#date_div{
+#date_div {
     margin-top: 2%;
-    margin-left: 6%;
+    margin-left: 15%;
     margin-bottom: 5%;
 }
 
 
-.date{
+.date {
     text-align: center;
     width: 150px;
     border-color: #E5E5E5;
@@ -139,15 +141,15 @@ input{
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
- }
+}
 
- #save{
-     width: 25%;
-     margin-left: 5%;
- }
+#save {
+    width: 25%;
+    margin-left: 5%;
+}
 
 
- .form_size{
+.form_size {
     width: 70%;
     margin-left: 3%;
     padding-bottom: 1%;
@@ -158,9 +160,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-left: 0px;
     border-right: 0px;
     margin-left: 40px;
- }
+}
 
-.img{
+.img {
     margin-bottom: 1%;
     position: absolute;
     z-index: 1;
@@ -186,7 +188,7 @@ li {
     display: block;
     line-height: 25px;
     width: 100%;
-    height: 25px;
+    height: 40px;
     overflow: hidden;
     border: 1px solid #ccc;
     color: #A0A0A0;
@@ -197,48 +199,57 @@ li {
 
 .select_box ul {
     position: absolute;
-    left: 0;
     border: 1px solid #ccc;
-    background: #fff;
+    background: white;
     overflow: hidden;
     display: none;
-    background: #ebebeb;
     z-index: 99999;
-    
-width: 100%;
+    width: 100%;
 }
 
 .select_box ul li {
     display: block;
-    height: 30px;
+    height: 39px;
     overflow: hidden;
-    line-height: 30px;
-    width: 100%;
+    line-height: 40px;
+    margin-left: -30px;
+    width: 120%;
 }
+
 
 .hover {
-    background: #ccc;
+    background: #FFF3F3;
 }
 
 
-.select_box{
-    
+.select_box {
+
     border-color: blue;
     border-width: 5px;
     border-style: hidden;
-    width: 84%;
+    width: 83%;
     margin-left: 40px;
 }
 
 
-#p{
+#p {
     margin-top: 5%;
 }
 
-#pic{
+#pic {
     margin-top: 5%;
     width: 80%;
 }
 
-#calendar1{
+.img_position {
+    width: 120%;
+}
+
+#exp {
+    width: 80%;
+}
+
+.list_icon{
+    width: 7%;
+    margin-right: 2%;
 }

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/list_team.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <header class="include" file="header.html">引入</header>
+</head>
+    <body>
+        <div class="body">
+            <div class="side_bar">
+                <table class="hover_style">
+                    <tr>
+                        <td class="point-t">
+                            <img class="point" src="icon/team/箭頭.png">
+                        </td>
+                        <td class="block-t">
+                            <div class="block" style="background-color: #FFCF52;"></div>
+                        </td>
+                        <td class="list-t">
+                            <a class="list">使用者介面設計</a>
+                        </td>
+                        <td class="dot-t">
+                            <img class="dot" src="icon/team/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+                <table class="hover_style">
+                    <tr>
+                        <td class="point-t">
+                            <img class="point" src="icon/team/箭頭.png">
+                        </td>
+                        <td class="block-t">
+                            <div class="block" style="background-color: #ffa7f8;"></div>
+                        </td>
+                        <td class="list-t">
+                            <a class="list">研究生日常</a>
+                        </td>
+                        <td class="dot-t">
+                            <img class="dot" src="icon/team/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+                <table class="hover_style">
+                    <tr>
+                        <td class="point-t">
+                            <img class="point" src="icon/team/箭頭.png">
+                        </td>
+                        <td class="block-t">
+                            <div class="block" style="background-color: #91DA72;"></div>
+                        </td>
+                        <td class="list-t">
+                            <a class="list">設計方法</a>
+                        </td>
+                        <td class="dot-t">
+                            <img class="dot" src="icon/team/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+                <table class="hover_style">
+                    <tr>
+                        <td class="point-t">
+                            <img class="point" src="icon/team/箭頭.png">
+                        </td>
+                        <td class="block-t">
+                            <div class="block" style="background-color: #F27D8D;"></div>
+                        </td>
+                        <td class="list-t">
+                            <a class="list">研究室</a>
+                        </td>
+                        <td class="dot-t">
+                            <img class="dot" src="icon/team/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+                <table class="hover_style">
+                    <tr>
+                        <td class="point-t">
+                            <img class="point" src="icon/team/箭頭.png">
+                        </td>
+                        <td class="block-t">
+                            <div class="block" style="background-color: #00CAF1;"></div>
+                        </td>
+                        <td class="list-t">
+                            <a class="list">個人行程</a>
+                        </td>
+                        <td class="dot-t">
+                            <img class="dot" src="icon/team/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+                <table class="hover_style">    
+                    <tr>
+                        <td class="point-t">
+                            <img class="point" src="icon/team/箭頭.png">
+                        </td>
+                        <td class="block-t">
+                            <div class="block" style="background-color: #C68CCF;"></div>
+                        </td>
+                        <td class="list-t">
+                            <a class="list">家族行程</a>
+                        </td>
+                        <td class="dot-t">
+                            <img class="dot" src="icon/team/蒙版组 49.png">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div class="head_bar">
+                <div id="head_block" style="background-color: #FFCF52;"></div>
+                <p>研究生日常</p>
+                <ul>
+                    <li id="head1">
+                        <img src="icon/team/課程筆記本.png" class="head_img">
+                        <a class="head_list">課程筆記本</a>
+                        <div class="buttom"></div>
+                    </li>
+                    <li id="head2">
+                        <img src="icon/team/安排.png" class="head_img">                        
+                        <a class="head_list">安排</a>
+                        <div class="buttom"></div>
+                    </li>
+                    <li id="head3">
+                        <img src="icon/team/作業.png" class="head_img">
+                        <a class="head_list">作業</a> 
+                        <div class="buttom"></div>                   
+                    </li>
+                    <li id="head4">
+                        <img src="icon/team/成績.png" class="head_img">
+                        <a class="head_list">成績</a>         
+                        <div class="buttom"></div>               
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div></div>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <script>
+            let head1 = document.getElementById("head1")
+            let head2 = document.getElementById("head2")
+            let head3 = document.getElementById("head2")
+            let head4 = document.getElementById("head4")
+
+            head1.onclick = function(){
+
+            }
+        </script>
+
+
+        <script>
+            $(".include").each(function(){
+                if(!!$(this).attr("file")) {
+                    var $includeObj = $(this);
+                    $(this).load($(this).attr("file"), function(html){
+                        $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+                    })
+                }
+            });
+        </script>    
+    </body>
+</html>
