@@ -13,10 +13,12 @@ li{
 .body{
     display: flex;
     margin-top: 1.2%;
-    height: 870px;
     font-size: 110%;
+    height: 870px;
     color: black;
 }
+
+
 
 .side_bar{
     background-color: rgb(255, 255, 255);
@@ -111,13 +113,31 @@ p{
     margin-left: 3%;
 }
 
-.head_bar_y li{
+/* .head_bar_y li{
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 12%;
     margin-right: 5%;
+} */
+
+.head_li1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 12%;
+    margin-right: 5%;
+}
+
+.head_li2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 12%;
+    margin-right: 1%;
 }
 
 .head_bar_p ul{
@@ -126,14 +146,14 @@ p{
     margin-left: 3%;
 }
 
-.head_bar_p li{
+/* .head_bar_p li{
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 12%;
     margin-right: 5%;
-}
+} */
 
 .head_img{
     margin-top: 0%;

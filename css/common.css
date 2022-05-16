@@ -5,3 +5,8 @@ a{
 *{
     font-family: Microsoft JhengHei, Arial; 
 }
+
+
+*::-webkit-scrollbar {
+    display: none;
+}
