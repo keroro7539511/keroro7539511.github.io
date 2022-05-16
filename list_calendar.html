@@ -157,6 +157,43 @@
         className: 'red',
     };
 
+    
+    var event01 = {
+        title: "開會",
+        start: "2022-03-01",
+        backgroundColor: "#F27D8D",
+        borderColor: "#F27D8D",
+        className: 'red',   
+    }
+    var event02 = {
+        title: "開會",
+        start: "2022-03-08",
+        backgroundColor: "#F27D8D",
+        borderColor: "#F27D8D",
+        className: 'red',   
+    }
+    var event03 = {
+        title: "開會",
+        start: "2022-03-15",
+        backgroundColor: "#F27D8D",
+        borderColor: "#F27D8D",
+        className: 'red',   
+    }
+    var event04 = {
+        title: "開會",
+        start: "2022-03-22",
+        backgroundColor: "#F27D8D",
+        borderColor: "#F27D8D",
+        className: 'red',   
+    }
+    var event05 = {
+        title: "開會",
+        start: "2022-03-29",
+        backgroundColor: "#F27D8D",
+        borderColor: "#F27D8D",
+        className: 'red',   
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         var calendarEl = document.getElementById("calendar1");
         var calendar1 = new FullCalendar.Calendar(calendarEl, {
@@ -316,7 +353,14 @@
         document.getElementById('save').onclick = function () {
             calendar1.addEvent(event);
         }
+        if(document.referrer == 'https://keroro7539511.github.io/list_team.html'){
+            calendar1.addEvent(event01);
+            calendar1.addEvent(event02);
+            calendar1.addEvent(event03);
+            calendar1.addEvent(event04);
+            calendar1.addEvent(event05);
 
+        }
         calendar1.render();
 
     });
