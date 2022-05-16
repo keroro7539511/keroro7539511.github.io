@@ -51,11 +51,16 @@
 
                             <div class="select_box"><input id="myselect" type="text" value="研究室" readonly="readonly">
                                 <ul class="select_ul " id="ul">
-                                    <li class="li active" value="研究室"><img class="list_icon" src="/icon/menu/下拉式選單/蒙版组 33.png"/>  研究室</li>
-                                    <li class="li" value="設計方法"><img class="list_icon" src="/icon/menu/下拉式選單/蒙版组 32.png"/>設計方法</li>
-                                    <li class="li" value="使用者介面設計"><img class="list_icon" src="/icon/menu/下拉式選單/蒙版组 31.png"/>使用者介面設計</li>
-                                    <li class="li" value="使用者介面設計"><img class="list_icon" src="/icon/menu/下拉式選單/蒙版组 34.png"/>個人行程</li>
-                                    <li class="li" value="使用者介面設計"><img class="list_icon" src="/icon/menu/下拉式選單/蒙版组 -1.png"/>家族行程</li>
+                                    <li class="li active" value="研究室"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 33.png" /> 研究室</li>
+                                    <li class="li" value="設計方法"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 32.png" />設計方法</li>
+                                    <li class="li" value="使用者介面設計"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 31.png" />使用者介面設計</li>
+                                    <li class="li" value="使用者介面設計"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 34.png" />個人行程</li>
+                                    <li class="li" value="使用者介面設計"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 -1.png" />家族行程</li>
                                 </ul>
                             </div>
                         </div>
@@ -157,41 +162,46 @@
         className: 'red',
     };
 
-    
+
     var event01 = {
         title: "開會",
         start: "2022-03-01",
-        backgroundColor: "#F27D8D",
-        borderColor: "#F27D8D",
-        className: 'red',   
+        backgroundColor: "#FFFFFF",
+        borderColor: "#FFFFFF",
+        textColor: '#FFCF52',
+        className: 'red',
     }
     var event02 = {
         title: "開會",
         start: "2022-03-08",
-        backgroundColor: "#F27D8D",
-        borderColor: "#F27D8D",
-        className: 'red',   
+        backgroundColor: "#FFFFFF",
+        borderColor: "#FFFFFF",
+        textColor: '#FFCF52',
+        className: 'red',
     }
     var event03 = {
         title: "開會",
         start: "2022-03-15",
-        backgroundColor: "#F27D8D",
-        borderColor: "#F27D8D",
-        className: 'red',   
+        backgroundColor: "#FFFFFF",
+        borderColor: "#FFFFFF",
+        textColor: '#FFCF52',
+        className: 'red',
     }
     var event04 = {
         title: "開會",
         start: "2022-03-22",
-        backgroundColor: "#F27D8D",
-        borderColor: "#F27D8D",
-        className: 'red',   
+        backgroundColor: "#FFFFFF",
+        borderColor: "#FFFFFF",
+        textColor: '#FFCF52',
+        className: 'red',
     }
     var event05 = {
         title: "開會",
         start: "2022-03-29",
-        backgroundColor: "#F27D8D",
-        borderColor: "#F27D8D",
-        className: 'red',   
+        backgroundColor: "#FFFFFF",
+        borderColor: "#FFFFFF",
+        textColor: '#FFCF52',
+        className: 'red',
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -353,7 +363,7 @@
         document.getElementById('save').onclick = function () {
             calendar1.addEvent(event);
         }
-        if(document.referrer == 'https://keroro7539511.github.io/list_team.html'){
+        if (document.referrer == 'https://keroro7539511.github.io/list_team.html') {
             calendar1.addEvent(event01);
             calendar1.addEvent(event02);
             calendar1.addEvent(event03);
