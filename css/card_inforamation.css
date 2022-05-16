@@ -60,3 +60,10 @@ body{
 .select2-results__option--highlighted {
     background-color: #BADA55 !important;
 }
+
+
+.add{
+    position: absolute;
+    right: 0;
+    margin-top: -2%;
+}

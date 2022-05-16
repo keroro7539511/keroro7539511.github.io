@@ -113,31 +113,62 @@
                 <div id="head_block" style="background-color: #FFCF52;"></div>
                 <p>研究生日常</p>
                 <ul>
-                    <li id="head1">
-                        <img src="icon/team/課程筆記本.png" class="head_img">
-                        <a class="head_list">課程筆記本</a>
-                        <div class="buttom"></div>
+                    <li>
+                        <a href="#" id="head1">
+                            <img src="icon/team/组 789.png" class="head_img">
+                            <div class="buttom1" id="buttom1"></div>
+                        </a>
                     </li>
-                    <li id="head2">
-                        <img src="icon/team/安排.png" class="head_img">                        
-                        <a class="head_list">安排</a>
-                        <div class="buttom"></div>
+                    <li>
+                        <a href="#" id="head2">
+                            <img src="icon/team/组 392.png" class="head_img">
+                            <div class="buttom" id="buttom2"></div>
+                        </a>
                     </li>
-                    <li id="head3">
-                        <img src="icon/team/作業.png" class="head_img">
-                        <a class="head_list">作業</a> 
-                        <div class="buttom"></div>                   
+                    <li>
+                        <a href="#" id="head3">
+                            <img src="icon/team/组 393.png" class="head_img">
+                            <div class="buttom" id="buttom3"></div>    
+                        </a>               
                     </li>
-                    <li id="head4">
-                        <img src="icon/team/成績.png" class="head_img">
-                        <a class="head_list">成績</a>         
-                        <div class="buttom"></div>               
+                    <li>
+                        <a href="#" id="head4">
+                            <img src="icon/team/组 394.png" class="head_img"> 
+                            <div class="buttom" id="buttom4"></div>    
+                        </a>           
                     </li>
                 </ul>
             </div>
 
-            <div class="content">
-                <div></div>
+            <div id="content1">
+                <h1>此頁尚未開發</h1>
+            </div>
+
+            <div id="content2">
+                <div class="content_head">
+                    <img src="icon/team/頭像.png" class="content_picture">
+                    <h1 class="content_title">吳敏郎</h1>
+                </div>
+                <div class="content_buttom">
+                    <div class="content_buttom_td">
+                        <p class="content_td">開會</p>
+                        <p class="content_td">工作仿</p>
+                        <p class="content_td">聚餐</p>
+                        <p class="content_td">助教</p>
+                        <p class="content_td">+新增安排</p>
+                    </div>
+                    
+                    <div class="content_line"></div>
+                </div>
+                
+            </div>
+
+            <div id="content3">
+                <h1>此頁尚未開發</h1>
+            </div>
+
+            <div id="content4">
+                <h1>此頁尚未開發</h1>
             </div>
         </div>
         
@@ -147,13 +178,81 @@
 
 
         <script>
-            let head1 = document.getElementById("head1")
-            let head2 = document.getElementById("head2")
-            let head3 = document.getElementById("head2")
-            let head4 = document.getElementById("head4")
+            let head1 = document.getElementById("head1");
+            let head2 = document.getElementById("head2");
+            let head3 = document.getElementById("head3");
+            let head4 = document.getElementById("head4");
+            let buttom1 = document.getElementById("buttom1");
+            let buttom2 = document.getElementById("buttom2");
+            let buttom3 = document.getElementById("buttom3");
+            let buttom4 = document.getElementById("buttom4");
+            let content1 = document.getElementById("content1");
+            let content2 = document.getElementById("content2");
+            let content3 = document.getElementById("content3");
+            let content4 = document.getElementById("content4");
 
             head1.onclick = function(){
+                buttom1.style.opacity = "1";
+                buttom2.style.opacity = "0";
+                buttom3.style.opacity = "0";
+                buttom4.style.opacity = "0";
 
+                content1.style.opacity = "1";
+                content1.style.zIndex = "1";
+                content2.style.opacity = "0";
+                content2.style.zIndex = "-1";
+                content3.style.opacity = "0";
+                content3.style.zIndex = "-1";
+                content4.style.opacity = "0";
+                content4.style.zIndex = "-1";
+            }
+
+            head2.onclick = function(){
+                buttom1.style.opacity = "0";
+                buttom2.style.opacity = "1";
+                buttom3.style.opacity = "0";
+                buttom4.style.opacity = "0";
+
+                content1.style.opacity = "0";
+                content1.style.zIndex = "-1";
+                content2.style.opacity = "1";
+                content2.style.zIndex = "1";
+                content3.style.opacity = "0";
+                content3.style.zIndex = "-1";
+                content4.style.opacity = "0";
+                content4.style.zIndex = "-1";
+            }
+
+            head3.onclick = function(){
+                buttom1.style.opacity = "0";
+                buttom2.style.opacity = "0";
+                buttom3.style.opacity = "1";
+                buttom4.style.opacity = "0";
+
+                content1.style.opacity = "0";
+                content1.style.zIndex = "-1";
+                content2.style.opacity = "0";
+                content2.style.zIndex = "-1";
+                content3.style.opacity = "1";
+                content3.style.zIndex = "1";
+                content4.style.opacity = "0";
+                content4.style.zIndex = "-1";
+            }
+
+            head4.onclick = function(){
+                buttom1.style.opacity = "0";
+                buttom2.style.opacity = "0";
+                buttom3.style.opacity = "0";
+                buttom4.style.opacity = "1";
+
+                content1.style.opacity = "0";
+                content1.style.zIndex = "-1";
+                content2.style.opacity = "0";
+                content2.style.zIndex = "-1";
+                content3.style.opacity = "0";
+                content3.style.zIndex = "-1";
+                content4.style.opacity = "1";
+                content4.style.zIndex = "1";
             }
         </script>
 
