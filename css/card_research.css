@@ -318,3 +318,10 @@ label {
     margin-top: 2%;
     margin-left: 2%;
 }
+
+.no_open{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 8%;
+    display: none;
+}
