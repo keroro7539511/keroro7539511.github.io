@@ -55,7 +55,8 @@
                         <img class="btn_select" id="third" src="/icon/research/右上/3_點選前.png" />
                         <img class="btn_select" id="forth" src="/icon/research/右上/4_點選前.png" />
                         <img class="btn_select" id="fifth" src="/icon/research/右上/5_點選前.png" />
-
+                        
+                        
                         <label>
                             <input type="checkbox" name="" id="" class="checkbox">
                             <span class="btn-box">
@@ -95,9 +96,17 @@
                         <div id="third_list">
                             <img class="btn_position" id="th1" src="/icon/research/右下/時段_1_點選前.png" />
                             <img class="btn_position" id="th2" src="/icon/research/右下/時段_2_點選前.png" />
-                            <img class="btn_position" src="/icon/research/右下/時間_1.png" />
+                            <img class="btn_position" id="t1" src="/icon/research/右下/時間_1.png" />
                             <img class="btn_position" id="small_size" src="/icon/research/右下/到.png" />
-                            <img class="btn_position" src="/icon/research/右下/時間_2.png" />
+                            <img class="btn_position" id="t2" src="/icon/research/右下/時間_2.png" />
+                            
+                        <label>
+                            <input type="checkbox" name="" id="all_day" class="checkbox">
+                            <span class="btn-box">
+                                <span class="btn"></span>
+                            </span>
+                            <span class="text">全天</span>
+                        </label>
                         </div>
 
                         <div class="third_word"></div>
@@ -331,6 +340,8 @@
     $('#forth_list').on('click', 'img', function () {
         $('#forth_list').css('display', 'none');
     });
+
+
 
 </script>
 
