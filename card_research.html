@@ -57,13 +57,6 @@
                         <img class="btn_select" id="fifth" src="/icon/research/右上/5_點選前.png" />
                         
                         
-                        <label>
-                            <input type="checkbox" name="" id="" class="checkbox">
-                            <span class="btn-box">
-                                <span class="btn"></span>
-                            </span>
-                            <span class="text">新增至行事曆</span>
-                        </label>
                     </div>
                     <hr>
                     <div id="right_buttom">
@@ -100,6 +93,15 @@
                             <img class="btn_position" id="small_size" src="/icon/research/右下/到.png" />
                             <img class="btn_position" id="t2" src="/icon/research/右下/時間_2.png" />
                             
+                        </div>
+
+                        <div class="third_word"></div>
+
+                        <div id="forth_list">
+                            
+
+
+                        
                         <label>
                             <input type="checkbox" name="" id="all_day" class="checkbox">
                             <span class="btn-box">
@@ -107,23 +109,15 @@
                             </span>
                             <span class="text">全天</span>
                         </label>
-                        </div>
 
-                        <div class="third_word"></div>
+                        <label>
+                            <input type="checkbox" name="" id="" class="checkbox">
+                            <span class="btn-box">
+                                <span class="btn"></span>
+                            </span>
+                            <span class="text">新增至行事曆</span>
+                        </label>
 
-                        <div id="forth_list">
-                            <div class="btn_clock"><img class="clock_position"
-                                    src="/icon/research/右下/時間下拉式選單/1_點選前.png" /></div>
-                            <div class="btn_clock"><img class="clock_position"
-                                    src="/icon/research/右下/時間下拉式選單/2_點選前.png" /></div>
-                            <div class="btn_clock"><img class="clock_position"
-                                    src="/icon/research/右下/時間下拉式選單/3_點選前.png" /></div>
-                            <div class="btn_clock"><img class="clock_position"
-                                    src="/icon/research/右下/時間下拉式選單/4_點選前.png" /></div>
-                            <div class="btn_clock"><img class="clock_position"
-                                    src="/icon/research/右下/時間下拉式選單/5_點選前.png" /></div>
-                            <div class="btn_clock"><img class="clock_position"
-                                    src="/icon/research/右下/時間下拉式選單/6_點選前.png" /></div>
                         </div>
                     </div>
                 </div>
@@ -331,9 +325,6 @@
         if (index == 1) {
             $('#th1').attr('src', '/icon/research/右下/時段_1_點選前.png');
             $('#th2').attr('src', '/icon/research/右下/時段_2_點選後.png');
-        }
-        if (index == 2 || index == 4) {
-            $('#forth_list').css('display', 'flex');
         }
     });
 
