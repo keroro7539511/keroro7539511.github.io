@@ -55,8 +55,8 @@
                         <img class="btn_select" id="third" src="/icon/research/右上/3_點選前.png" />
                         <img class="btn_select" id="forth" src="/icon/research/右上/4_點選前.png" />
                         <img class="btn_select" id="fifth" src="/icon/research/右上/5_點選前.png" />
-                        
-                        
+
+
                     </div>
                     <hr>
                     <div id="right_buttom">
@@ -89,41 +89,69 @@
                         <div id="third_list">
                             <img class="btn_position" id="th1" src="/icon/research/右下/時段_1_點選前.png" />
                             <img class="btn_position" id="th2" src="/icon/research/右下/時段_2_點選前.png" />
-                            <img class="btn_position" id="t1" src="/icon/research/右下/時間_1.png" />
+
+                            <div class="select_box "><input id="myselect" type="text" value="下午5:30"
+                                    readonly="readonly">
+                                <ul class="select_ul" id="ul">
+                                    <li>下午4:30</li>
+                                    <li class="active">下午5:30</li>
+                                    <li>下午6:30</li>
+                                    <li>下午7:30</li>
+                                    <li>下午8:30</li>
+                                    <li>下午9:30</li>
+                                </ul>
+                            </div>
+
                             <img class="btn_position" id="small_size" src="/icon/research/右下/到.png" />
-                            <img class="btn_position" id="t2" src="/icon/research/右下/時間_2.png" />
-                            
+
+                            <div class="select_box "><input id="myselect" type="text" value="下午6:30"
+                                    readonly="readonly">
+                                <ul class="select_ul" id="ul">
+                                    <li>下午4:30</li>
+                                    <li class="active">下午5:30</li>
+                                    <li>下午6:30</li>
+                                    <li>下午7:30</li>
+                                    <li>下午8:30</li>
+                                    <li>下午9:30</li>
+                                </ul>
+                            </div>
+
+
                         </div>
 
-                        <div class="third_word"></div>
+                        <div class="third_word">
+
+                            <label>
+                                <input type="checkbox" name="" id="all_day" class="checkbox">
+                                <span class="btn-box">
+                                    <span class="btn"></span>
+                                </span>
+                                <span class="text">全天</span>
+                            </label>
+                            <br>
+                            <br>
+                            <label>
+                                <input type="checkbox" name="" id="" class="checkbox">
+                                <span class="btn-box">
+                                    <span class="btn"></span>
+                                </span>
+                                <span class="text">新增至行事曆</span>
+                            </label>
+
+                        </div>
 
                         <div id="forth_list">
-                            
 
 
-                        
-                        <label>
-                            <input type="checkbox" name="" id="all_day" class="checkbox">
-                            <span class="btn-box">
-                                <span class="btn"></span>
-                            </span>
-                            <span class="text">全天</span>
-                        </label>
 
-                        <label>
-                            <input type="checkbox" name="" id="" class="checkbox">
-                            <span class="btn-box">
-                                <span class="btn"></span>
-                            </span>
-                            <span class="text">新增至行事曆</span>
-                        </label>
+
 
                         </div>
-                        
+
                     </div>
                 </div>
-                
-                <img src="/icon/research/此頁面待開發中....png" class="no_open" />
+
+                <img src="/icon/未開放.png" class="no_open" />
             </div>
             <div>
                 <div class="top_div">
@@ -344,6 +372,22 @@
         $('#forth_list').css('display', 'none');
     });
 
+    $(document).ready(function () {
+        $(".select_box input").click(function () {
+            var thisinput = $(this);
+            var thisul = $(this).parent().find("ul");
+            if (thisul.css("display") == "none") {
+                if (thisul.height() > 200) { thisul.css({ height: "200px", "overflow-y": "scroll" }) };
+                thisul.fadeIn("100");
+                thisul.hover(function () { }, function () { thisul.fadeOut("100"); })
+                thisul.find("li").click(function () { thisinput.val($(this).text()); thisul.fadeOut("100"); }).hover(function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); });
+            }
+            else {
+                thisul.fadeOut("fast");
+            }
+        })
+
+    });
 
 
 </script>

@@ -1,0 +1,147 @@
+body {
+    width: 100%;
+    height: 95%;
+    border-color: red;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+#left_part {
+    position: relative;
+    display: flex;
+    margin-top: -3%;
+    width: 20%;
+    height: 89%;
+    float: left;
+    display: inline;
+    border-color: #F0F0F0;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #F0F0F0;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+#right_part {
+    position: relative;
+    margin-top: -3%;
+    width: 80%;
+    height: 89%;
+    border-color: green;
+    border-width: 5px;
+    border-style: hidden;
+    z-index: 1;
+    background-color: rgb(245,245,245);
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+#chat{
+    font-size: 30px;
+    margin-left: 8%;
+    margin-top: 4%;
+    margin-bottom: 10%;
+}
+
+#chat_box{
+    margin-left: 9%;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px red hidden;
+    align-content: space-between;
+    justify-content: center;
+    
+}
+
+.box_position{
+    display: flex;
+    width: 45%;
+    height: 31%;
+    border: 3px #E5E5E5 solid;
+    border-radius: 10px;
+    margin-right: 5%;
+    
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.img_fix{
+    height: 90%;
+}
+
+.box_position:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+#right_top{
+    width: 98%;
+    height: 80%;
+    border: 3px red hidden;
+    margin-top: 2%;
+    margin-left: 0.5%;
+    overflow: auto;
+
+}
+
+
+.content{
+    width: 100%;
+}
+
+
+#right_top > img{
+    display: none;
+}
+
+#right_top > .show{
+    display: flex;
+}
+
+.waiting{
+    width: 40%;
+    margin-top: 20%;
+    margin-left: 28%;
+}
+
+#right_middle{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    border: 3px red hidden;
+    justify-content: center;
+}
+
+#text{
+    width: 95%;
+    height: 60%;
+    border-color: rgb(224, 224, 224);
+    font-size: 20px;
+    padding-left: 1%;
+    margin-top: 1%;
+    border-radius: 5px;
+}
+
+
+#right_buttom{
+    flex-direction: row;
+    border: 3px red hidden;
+    height: 10%;
+
+}
+
+#right_buttom > img{
+    margin-left: 2%;
+}
+
+#submit{
+    position: absolute;
+    right: 2%;
+}

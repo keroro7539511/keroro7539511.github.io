@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/card_grade.css" />
+    <link rel="stylesheet" href="/css/card_chat.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="include" file="header.html">引入</header>
+
+<body>
+    <div id="left_part">
+        <p id="chat">聊天</p>
+        <div id="chat_box">
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/左1.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/右1.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/左2.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/右2.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/左3.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/右3.png"></div>
+        </div>
+    </div>
+    <div id="right_part">
+        <div id="right_top">
+            <img class="content" id="img_change" src="/icon/chat/右邊/1.png" />
+            <img class="waiting" src="/icon/未開放.png" />
+            <img class="content" src="/icon/chat/右邊/组 926.png" />
+            <img class="waiting" src="/icon/未開放.png" />
+            <img class="waiting" src="/icon/未開放.png" />
+            <img class="waiting" src="/icon/未開放.png" />
+
+        </div>
+        <div id="right_middle">
+            <input type="text" id="text" placeholder="輸入訊息" onclick="click_title()" />
+        </div>
+        <div id="right_buttom">
+            <img src="/icon/chat/右邊/輸入訊息框_下方icon_1.png"/>
+            <img id="submit" src="/icon/chat/右邊/傳送_icon.png"/>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+            })
+        }
+    });
+
+    $("#chat_box").on("click", "div", function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#right_top > img").eq(index).addClass("show").siblings().removeClass("show");
+    });
+
+    $('#submit').on('click', function(){
+        $('#img_change').attr('src', '/icon/chat/右邊/2.png')
+    });
+
+
+    function click_title() {
+        document.getElementById('text').value = '老師找核銷大師';
+        document.getElementById('text').disabled = true;
+    }
+</script>
+
+</html>

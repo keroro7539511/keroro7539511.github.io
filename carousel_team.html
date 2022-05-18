@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <link rel="icon" href="logo.ico" type="image/x-icon"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/common.css"/>
+        <link rel="stylesheet" href="/css/carousel_team.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+    </head>
+    <header class="include" file="carousel_header.html">引入</header>
+    <body>
+        <div class="top">
+            <div class="carousel top_carousel">
+                <a id="t1" class="carousel-item" href="#"><img src="icon/team/c1.png"></a>
+                <a id="t2" class="carousel-item" href="#"><img src="icon/team/c2.png"></a>
+                <a id="t3" class="carousel-item" href="#"><img src="icon/team/c3.png"></a>
+                <a id="t4" class="carousel-item" href="#"><img src="icon/team/c4.png"></a>
+                <a id="t5" class="carousel-item" href="#"><img src="icon/team/c5.png"></a>
+                <a id="t6" class="carousel-item" href="#"><img src="icon/team/c6.png"></a>
+                <a id="t7" class="carousel-item" href="#"><img src="icon/team/c7.png"></a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="mid">
+            <img id="hi" class="head_img" src="icon/team/1_頭像.png">
+            <div id="mb" class="mid_div">
+                <a class="mid_buttom" href="#"><img src="icon/team/課程筆記本-01.png"></a>
+                <a id="arrange" class="mid_buttom" href="#"><img id="arrange_img" src="icon/team/安排-01.png"></a>
+                <a class="mid_buttom" href="#"><img src="icon/team/作業-01.png"></a>
+                <a class="mid_buttom" href="#"><img src="icon/team/成績-01.png"></a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="bottom">
+            <div id="bottom_carousel" class="carousel">
+                <div class="carousel-item content">
+                    <p>開會</p>
+                    <div class="week">
+                        <p>重複：</p>
+                        <a href="#">每天</a>
+                        <a id="week_buttom" href="#">每週</a>
+                        <a href="#">每月</a>
+                        <a href="#">每年</a>
+                    </div>
+                    <div class="date">
+                        <a href="#">星期日</a>
+                        <a href="#">星期一</a>
+                        <a id="date_buttom" href="#">星期二</a>
+                        <a href="#">星期三</a>
+                        <a href="#">星期四</a>
+                        <a href="#">星期五</a>
+                        <a href="#">星期六</a>
+                    </div>
+                    <div class="time">
+                        <p>時段：</p>
+                        <a href="#">上午</a>
+                        <a id="time_buttom" href="#">下午</a>
+                        <div class="select_box"><input id="myselect" type="text" value="下午5:30" readonly="readonly">
+                            <ul class="select_ul" id="ul">
+                                <li>下午4:30</li>
+                                <li class="active">下午5:30</li>
+                                <li>下午6:30</li>
+                                <li>下午7:30</li>
+                                <li>下午8:30</li>
+                                <li>下午9:30</li>
+                            </ul>
+                        </div>
+                        <p class="to">到</p>
+                        <div class="select_box"><input id="myselect" type="text" value="下午6:30" readonly="readonly">
+                            <ul class="select_ul" id="ul">
+                                <li>下午4:30</li>
+                                <li>下午5:30</li>
+                                <li class="active">下午6:30</li>
+                                <li>下午7:30</li>
+                                <li>下午8:30</li>
+                                <li>下午9:30</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="add_calendar">
+                        <div class="switch s">
+                            <label>
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                新增至行事曆
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item content">
+                    <p>工作仿</p>
+                    <img class="closed" src="icon/team/此頁面待開發中....png">
+                </div>
+                <div class="carousel-item content">
+                    <p>聚餐</p>
+                    <img class="closed" src="icon/team/此頁面待開發中....png">
+                </div>
+                <div class="carousel-item content">
+                    <p>助教</p>
+                    <img class="closed" src="icon/team/此頁面待開發中....png">
+                </div>
+                <div class="carousel-item content">
+                    <p>+新增安排</p>
+                    <img class="closed" src="icon/team/此頁面待開發中....png">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let t1 = document.getElementById("t1");
+        let t2 = document.getElementById("t2");
+        let t3 = document.getElementById("t3");
+        let t4 = document.getElementById("t4");
+        let t5 = document.getElementById("t5");
+        let t6 = document.getElementById("t6");
+        let t7 = document.getElementById("t7");
+        let mb = document.getElementById("mb");
+        let bottom_carousel = document.getElementById("bottom_carousel");
+        let arrange = document.getElementById("arrange");
+        let active = 0;
+
+        t1.onclick = function(){
+            document.getElementById("hi").src = "icon/team/1_頭像.png";
+            bottom_carousel.style.opacity = 0;
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 0;
+        }
+        t2.onclick = function(){
+            document.getElementById("hi").src = "icon/team/2_頭像.png";
+            mb.style.transitionDuration = "200ms";
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 1;
+        }
+        t3.onclick = function(){
+            document.getElementById("hi").src = "icon/team/3_頭像.png";
+            bottom_carousel.style.opacity = 0;
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 0;
+        }
+        t4.onclick = function(){
+            document.getElementById("hi").src = "icon/team/4_頭像.png";
+            bottom_carousel.style.opacity = 0;
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 0;
+        }
+        t5.onclick = function(){
+            document.getElementById("hi").src = "icon/team/5_頭像.png";
+            bottom_carousel.style.opacity = 0;
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 0;
+        }
+        t6.onclick = function(){
+            document.getElementById("hi").src = "icon/team/6_頭像.png";
+            bottom_carousel.style.opacity = 0;
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 0;
+        }
+        t7.onclick = function(){
+            document.getElementById("hi").src = "icon/team/7_頭像.png";
+            bottom_carousel.style.opacity = 0;
+            document.getElementById("arrange_img").src = "icon/team/安排-01.png";
+            active = 0;
+        }
+        arrange.onclick = function(){
+            if(active==1){
+                document.getElementById("arrange_img").src = "icon/team/安排-02.png";
+                bottom_carousel.style.opacity = "1";
+                bottom_carousel.style.transitionDuration = "200ms";
+            }
+        }
+
+        let week_buttom = document.getElementById("week_buttom");
+        let date_buttom = document.getElementById("date_buttom");
+        let time_buttom = document.getElementById("time_buttom");
+
+        week_buttom.onclick = function(){
+                week_buttom.style.backgroundColor = "#FF9FDE";
+                week_buttom.style.color = "#FFFFFF";
+                week_buttom.style.borderColor = "#FF9FDE";
+                week_buttom.style.transitionDuration = "200ms";
+        }
+
+        date_buttom.onclick = function(){
+                date_buttom.style.backgroundColor = "#FF9FDE";
+                date_buttom.style.color = "#FFFFFF";
+                date_buttom.style.borderColor = "#FF9FDE";
+                date_buttom.style.transitionDuration = "200ms";
+        }
+
+        time_buttom.onclick = function(){
+                time_buttom.style.backgroundColor = "#FF9FDE";
+                time_buttom.style.color = "#FFFFFF";
+                time_buttom.style.borderColor = "#FF9FDE";
+                time_buttom.style.transitionDuration = "200ms";
+        }
+    </script>
+
+    <script>
+        $(".include").each(function(){
+            if(!!$(this).attr("file")) {
+                var $includeObj = $(this);
+                $(this).load($(this).attr("file"), function(html){
+                    $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+                })
+            }
+        });
+    </script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                numVisible: 7,
+            });
+        });
+
+        $(document).ready(function () {
+            $(".select_box input").click(function () {
+                var thisinput = $(this);
+                var thisul = $(this).parent().find("ul");
+                if (thisul.css("display") == "none") {
+                    if (thisul.height() > 200) { thisul.css({ height: "200px", "overflow-y": "scroll" }) };
+                    thisul.fadeIn("100");
+                    thisul.hover(function () { }, function () { thisul.fadeOut("100"); })
+                    thisul.find("li").click(function () { thisinput.val($(this).text()); thisul.fadeOut("100"); }).hover(function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); });
+                }
+                else {
+                    thisul.fadeOut("fast");
+                }
+            })
+
+        });
+    </script>
+
+
+</html>
