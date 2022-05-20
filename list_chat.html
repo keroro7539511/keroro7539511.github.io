@@ -6,7 +6,7 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/card_grade.css" />
-    <link rel="stylesheet" href="/css/card_chat.css" />
+    <link rel="stylesheet" href="/css/list_chat.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
@@ -16,12 +16,12 @@
     <div id="left_part">
         <p id="chat">聊天</p>
         <div id="chat_box">
-            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/左1.png"></div>
-            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/右1.png"></div>
-            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/左2.png"></div>
-            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/右2.png"></div>
-            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/左3.png"></div>
-            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/右3.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/1_梁咪咪.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/2_鄧有又.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/3_歐青青.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/4_劉大師.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/5_李萱萱.png"></div>
+            <div class="box_position"><img class="img_fix" src="/icon/chat/左邊/6_林資資.png"></div>
         </div>
     </div>
     <div id="right_part">
@@ -59,14 +59,10 @@
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
         $("#right_top > img").eq(index).addClass("show").siblings().removeClass("show");
-        let scrollHeight = $('#right_top').prop('scrollHeight');
-        $('#right_top').scrollTop(scrollHeight, 500);
     });
 
     $('#submit').on('click', function(){
         $('#img_change').attr('src', '/icon/chat/右邊/2.png')
-        let right_top = document.getElementById('right_top');
-        right_top.scrollTo(0, document.getElementById('right_top').scrollHeight);
     });
 
 
@@ -74,7 +70,6 @@
         document.getElementById('text').value = '老師找核銷大師';
         document.getElementById('text').disabled = true;
     }
-
 </script>
 
 </html>

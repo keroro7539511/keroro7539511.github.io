@@ -37,10 +37,47 @@
                             <img id="save" src="/icon/menu/紅色/组 754.png" data-bs-dismiss="modal" />
                         </div>
                         <div id="date_div">
-                            <input type="date" value="2022-03-17" class="date" />
-                            <label>到</label>
-                            <input type="date" value="2022-03-17" class="date" />
+                            <div id="not_all">
+                                <input type="date" value="2022-03-17" class="date" />
+                                <div class="select_box time_size"><input id="myselect" type="text" value="下午5:30"
+                                        readonly="readonly">
+                                    <ul class="select_ul" id="ul">
+                                        <li>下午4:30</li>
+                                        <li class="active">下午5:30</li>
+                                        <li>下午6:30</li>
+                                        <li>下午7:30</li>
+                                        <li>下午8:30</li>
+                                        <li>下午9:30</li>
+                                    </ul>
+                                </div>
+                                <label>到</label>
+                                <div class="select_box time_size"><input id="myselect" type="text" value="下午6:30"
+                                        readonly="readonly">
+                                    <ul class="select_ul" id="ul">
+                                        <li>下午4:30</li>
+                                        <li class="active">下午5:30</li>
+                                        <li>下午6:30</li>
+                                        <li>下午7:30</li>
+                                        <li>下午8:30</li>
+                                        <li>下午9:30</li>
+                                    </ul>
+                                </div>
+                                <input type="date" value="2022-03-17" class="date" />
+                            </div>
+                            <div id="in_all">
+                                <input type="date" value="2022-03-26" class="date" />
+                                <label>到</label>
+                                <input type="date" value="2022-03-26" class="date" />
+                            </div>
                         </div>
+
+                        <label>
+                            <input type="checkbox" name="" id="all_day" class="checkbox">
+                            <span class="btn-box">
+                                <span class="btn"></span>
+                            </span>
+                            <span class="text">全天</span>
+                        </label>
                         <div class="text_save_div">
                             <img id="member" src="/icon/menu/紅色/蒙版组 10.png" class="img" />
                             <input type="text" class="form_size" placeholder="成員" disabled />
@@ -50,12 +87,12 @@
 
                             <div class="select_box"><input id="myselect" type="text" value="研究室" readonly="readonly">
                                 <ul class="select_ul " id="ul">
-                                    <li class="li active" value="研究室"><img class="list_icon"
-                                            src="/icon/menu/下拉式選單/蒙版组 33.png" /> 研究室</li>
-                                    <li class="li" value="設計方法"><img class="list_icon"
-                                            src="/icon/menu/下拉式選單/蒙版组 32.png" />設計方法</li>
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
                                             src="/icon/menu/下拉式選單/蒙版组 31.png" />使用者介面設計</li>
+                                    <li class="li" value="設計方法"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 32.png" />設計方法</li>
+                                    <li class="li active" value="研究室"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 33.png" /> 研究室</li>
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
                                             src="/icon/menu/下拉式選單/蒙版组 34.png" />個人行程</li>
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
@@ -150,6 +187,18 @@
         }
     });
 
+    $('#all_day').change(function(){
+        if($(".checkbox").is(':checked')){
+            $('#not_all').css('display', 'none');
+            $('#in_all').css('display', 'block');
+        }
+        else{
+            $('#not_all').css('display', 'flex');
+            $('#in_all').css('display', 'none');
+
+        }
+    });
+
     var event = {
 
         title: "1111",
@@ -164,35 +213,35 @@
         start: "2022-03-01",
         backgroundColor: "#FF9FDE",
         borderColor: "#FF9FDE",
-        className: 'red',   
+        className: 'red',
     }
     var event02 = {
         title: "開會",
         start: "2022-03-08",
         backgroundColor: "#FF9FDE",
         borderColor: "#FF9FDE",
-        className: 'red',   
+        className: 'red',
     }
     var event03 = {
         title: "開會",
         start: "2022-03-15",
         backgroundColor: "#FF9FDE",
         borderColor: "#FF9FDE",
-        className: 'red',   
+        className: 'red',
     }
     var event04 = {
         title: "開會",
         start: "2022-03-22",
         backgroundColor: "#FF9FDE",
         borderColor: "#FF9FDE",
-        className: 'red',   
+        className: 'red',
     }
     var event05 = {
         title: "開會",
         start: "2022-03-29",
         backgroundColor: "#FF9FDE",
         borderColor: "#FF9FDE",
-        className: 'red',   
+        className: 'red',
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -351,7 +400,7 @@
             calendar1.addEvent(event);
         }
 
-        if(document.referrer == 'https://keroro7539511.github.io/card_research.html'){
+        if (document.referrer == 'https://keroro7539511.github.io/card_research.html') {
             calendar1.addEvent(event01);
             calendar1.addEvent(event02);
             calendar1.addEvent(event03);
@@ -473,7 +522,7 @@
         })
 
         $(".li").click(function () {
-            if ($(this).index() == 0) {
+            if ($(this).index() == 2) {
                 $('#member').attr('src', '/icon/menu/紅色/蒙版组 10.png');
                 $('#research').attr('src', '/icon/menu/紅色/蒙版组 11.png');
                 $('#alert').attr('src', '/icon/menu/紅色/蒙版组 12.png');
@@ -500,7 +549,7 @@
                 $('#x').attr('src', '/icon/menu/綠色/蒙版组 9.png');
                 $('.text').css('border-color', '#91DA72');
             }
-            if ($(this).index() == 2) {
+            if ($(this).index() == 0) {
                 $('#member').attr('src', '/icon/menu/黃色/蒙版组 10.png');
                 $('#research').attr('src', '/icon/menu/黃色/蒙版组 11.png');
                 $('#alert').attr('src', '/icon/menu/黃色/蒙版组 12.png');

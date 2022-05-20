@@ -84,12 +84,13 @@ p {
 }
 
 .modal-content {
-    height: 80%;
+    height: 85%;
+    
 }
 
 .text_save_div {
     width: 90%;
-    height: 10%;
+    height: 9.5%;
     border-color: blue;
     border-width: 5px;
     border-style: hidden;
@@ -122,9 +123,11 @@ input {
     border-right: 0px;
     border-width: 1px;
     background-color: #E5E5E5;
+    border-radius: 7px;
 
 
 }
+
 
 #date_div {
     margin-top: 2%;
@@ -140,7 +143,6 @@ input {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
 }
 
 #save {
@@ -181,7 +183,7 @@ ul,
 li {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    padding-left: 3%;
 }
 
 .select_box input {
@@ -191,7 +193,6 @@ li {
     height: 40px;
     overflow: hidden;
     border: 1px solid #ccc;
-    color: #A0A0A0;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -213,7 +214,7 @@ li {
     overflow: hidden;
     line-height: 40px;
     margin-left: -30px;
-    width: 120%;
+    width: 160%;
 }
 
 
@@ -253,3 +254,74 @@ li {
     width: 7%;
     margin-right: 2%;
 }
+
+
+
+#not_all{
+    display: flex;
+    margin-left: -15%;
+}
+
+#not_all > input{
+    width: 26%;
+    padding: 1%;
+}
+
+
+.time_size{
+    width: 20%;
+    margin-top: 0;
+    margin-left: 1%;
+}
+
+#not_all > label{
+    margin-top: 1.5%;
+    margin-left: -1%;
+}
+
+
+.btn-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #ccc;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, .13) inset;
+}
+
+.btn-box .btn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(242, 125, 141);
+    margin-left: 0;
+    /*動畫從ml為0開始*/
+    transition: .5s;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox:checked+.btn-box {
+    background-color: rgb(252, 210, 216);
+}
+
+.checkbox:checked+.btn-box .btn {
+    margin-left: 20px;
+}
+
+.modal-body > label{
+    width: 20%;
+    margin-left: 5%;
+}
+
+
+#in_all{
+    display: none;
+}
+

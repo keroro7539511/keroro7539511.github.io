@@ -38,10 +38,47 @@
                             <img id="save" src="/icon/menu/紅色/组 754.png" data-bs-dismiss="modal" />
                         </div>
                         <div id="date_div">
-                            <input type="date" value="2022-03-17" class="date" />
-                            <label>到</label>
-                            <input type="date" value="2022-03-17" class="date" />
+                            <div id="not_all">
+                                <input type="date" value="2022-03-17" class="date" />
+                                <div class="select_box time_size"><input id="myselect" type="text" value="下午5:30"
+                                        readonly="readonly">
+                                    <ul class="select_ul" id="ul">
+                                        <li>下午4:30</li>
+                                        <li class="active">下午5:30</li>
+                                        <li>下午6:30</li>
+                                        <li>下午7:30</li>
+                                        <li>下午8:30</li>
+                                        <li>下午9:30</li>
+                                    </ul>
+                                </div>
+                                <label>到</label>
+                                <div class="select_box time_size"><input id="myselect" type="text" value="下午6:30"
+                                        readonly="readonly">
+                                    <ul class="select_ul" id="ul">
+                                        <li>下午4:30</li>
+                                        <li class="active">下午5:30</li>
+                                        <li>下午6:30</li>
+                                        <li>下午7:30</li>
+                                        <li>下午8:30</li>
+                                        <li>下午9:30</li>
+                                    </ul>
+                                </div>
+                                <input type="date" value="2022-03-17" class="date" />
+                            </div>
+                            <div id="in_all">
+                                <input type="date" value="2022-03-26" class="date" />
+                                <label>到</label>
+                                <input type="date" value="2022-03-26" class="date" />
+                            </div>
                         </div>
+                        
+                        <label>
+                            <input type="checkbox" name="" id="all_day" class="checkbox">
+                            <span class="btn-box">
+                                <span class="btn"></span>
+                            </span>
+                            <span class="text">全天</span>
+                        </label>
                         <div class="text_save_div">
                             <img id="member" src="/icon/menu/紅色/蒙版组 10.png" class="img" />
                             <input type="text" class="form_size" placeholder="成員" disabled />
@@ -51,12 +88,12 @@
 
                             <div class="select_box"><input id="myselect" type="text" value="研究室" readonly="readonly">
                                 <ul class="select_ul " id="ul">
-                                    <li class="li active" value="研究室"><img class="list_icon"
-                                            src="/icon/menu/下拉式選單/蒙版组 33.png" /> 研究室</li>
-                                    <li class="li" value="設計方法"><img class="list_icon"
-                                            src="/icon/menu/下拉式選單/蒙版组 32.png" />設計方法</li>
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
                                             src="/icon/menu/下拉式選單/蒙版组 31.png" />使用者介面設計</li>
+                                    <li class="li" value="設計方法"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 32.png" />設計方法</li>
+                                    <li class="li active" value="研究室"><img class="list_icon"
+                                            src="/icon/menu/下拉式選單/蒙版组 33.png" /> 研究室</li>
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
                                             src="/icon/menu/下拉式選單/蒙版组 34.png" />個人行程</li>
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
@@ -148,6 +185,18 @@
             $(this).load($(this).attr("file"), function (html) {
                 $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
             })
+        }
+    });
+
+    $('#all_day').change(function(){
+        if($(".checkbox").is(':checked')){
+            $('#not_all').css('display', 'none');
+            $('#in_all').css('display', 'flex');
+        }
+        else{
+            $('#not_all').css('display', 'flex');
+            $('#in_all').css('display', 'none');
+
         }
     });
 
@@ -260,6 +309,14 @@
                 },
                 {
                     title: "出差",
+                    start: "2022-03-18",
+                    textColor: '#00CAF1',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'blue',
+                },
+                {
+                    title: "出差",
                     start: "2022-03-22",
                     textColor: '#00CAF1',
                     backgroundColor: '#FFFFFF',
@@ -345,6 +402,14 @@
                     backgroundColor: '#FFFFFF',
                     borderColor: '#FFFFFF',
                     className: 'red',
+                },
+                {
+                    title: "出遊",
+                    start: "2022-03-18",
+                    textColor: '#C68CCF',
+                    backgroundColor: '#FFFFFF',
+                    borderColor: '#FFFFFF',
+                    className: 'purple',
                 },
 
                 {
@@ -486,7 +551,7 @@
         })
 
         $(".li").click(function () {
-            if ($(this).index() == 0) {
+            if ($(this).index() == 2) {
                 $('#member').attr('src', '/icon/menu/紅色/蒙版组 10.png');
                 $('#research').attr('src', '/icon/menu/紅色/蒙版组 11.png');
                 $('#alert').attr('src', '/icon/menu/紅色/蒙版组 12.png');
@@ -513,7 +578,7 @@
                 $('#x').attr('src', '/icon/menu/綠色/蒙版组 9.png');
                 $('.text').css('border-color', '#91DA72');
             }
-            if ($(this).index() == 2) {
+            if ($(this).index() == 0) {
                 $('#member').attr('src', '/icon/menu/黃色/蒙版组 10.png');
                 $('#research').attr('src', '/icon/menu/黃色/蒙版组 11.png');
                 $('#alert').attr('src', '/icon/menu/黃色/蒙版组 12.png');
