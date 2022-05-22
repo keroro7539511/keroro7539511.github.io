@@ -1,0 +1,87 @@
+#top{
+    width: 100%;
+    height: 12%;
+    border: 3px solid rgb(176, 176, 176);
+    margin-top: -2%;
+    display: flex;
+}
+
+
+.img_position{
+    height: 35%;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+#red{
+    height: 50%;
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+
+#select{
+    width: 40%;
+    height: 100%;
+    margin-left: 15%;
+    border: 3px hidden blue;
+    justify-content: center;
+    display: flex;
+    flex-direction:row;
+}
+
+.btn_switch{
+    font-size: 20px;
+    height: 70%;
+    width: 25%;
+    border: 3px hidden rgb(15, 215, 241);
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+
+#content>.show {
+    display: flex;
+}
+
+#content>div {
+    display: none;
+}
+
+.active{
+    border-bottom: 10px rgb(16,115,215) solid;
+
+}
+
+#content{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.img_test{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.img_test > img{
+    height: 20%;
+    margin-top: 13%;
+}
+
+#main{
+    margin-top: 2%;
+    display: flex;
+    width: 60%;
+    height: 80%;
+    border: 5px rgb(255, 0, 140) hidden;
+    flex-direction: column;
+
+}
+
+.btn_size:hover{
+    background-color: rgb(228, 240, 251);
+}

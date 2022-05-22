@@ -325,3 +325,12 @@ li {
     display: none;
 }
 
+
+#title{
+    border-radius: 0;
+}
+
+
+.fc-daygrid-day-number{
+    margin-right: 40%;
+}

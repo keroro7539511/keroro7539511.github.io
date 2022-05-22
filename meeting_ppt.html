@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/meeting_ppt.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+</head>
+<header class="include" file="header.html">引入</header>
+
+<body>
+    <div id="top">
+        <img class="img_position" src="/icon/homework/選擇頁面/组 723.png" />
+        <img id="red" src="/icon/homework/選擇頁面/组 331.png" />
+        <div id="select">
+            <div class="btn_switch active">訊息串</div>
+            <div class="btn_switch">課堂作業</div>
+            <div class="btn_switch">成員</div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="img_test show">
+            <img src="/icon/research/此頁面待開發中....png" />
+        </div>
+        <div id="main">
+            <div id="left_part">
+                <img id="img_size" src="/icon/homework/選擇頁面/開會簡報.png" />
+                <img id="stop" src="/icon/homework/選擇頁面/截止日期：3月30日  下午1159.png" />
+                <hr>
+                <div id="ppt_div">
+                    <div class="ppt_size">
+                        <img src="/icon/homework/選擇頁面/進度報告icon.png">
+                        <p>進度報告 3/1</p>
+                    </div>
+                    <div class="ppt_size">
+                        <img src="/icon/homework/選擇頁面/進度報告icon.png">
+                        <p>進度報告 3/8</p>
+
+                    </div>
+                    <div class="ppt_size">
+                        <img src="/icon/homework/選擇頁面/進度報告icon.png">
+                        <p>進度報告 3/15</p>
+
+                    </div>
+                    <div class="ppt_size">
+                        <img src="/icon/homework/選擇頁面/進度報告icon.png">
+                        <p>進度報告 3/22</p>
+
+                    </div>
+                    <div class="ppt_size">
+                        <img src="/icon/homework/選擇頁面/進度報告icon.png">
+                        <p>進度報告 3/29</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="right_part">
+                <div id="right_top">
+                    <img src="/icon/homework/選擇頁面/您的作業/您的作業.png"/>
+                </div>
+                <div id="right_bottom">
+                    <img src="/icon//homework/選擇頁面/您的作業/私人註解.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="img_test">
+            <img src="/icon/research/此頁面待開發中....png" />
+        </div>
+    </div>
+</body>
+
+<script>
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+            })
+        }
+    });
+
+    $("#select").on("click", "div", function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#content>div").eq(index).addClass("show").siblings().removeClass("show");
+
+    });
+</script>
+
+</html>

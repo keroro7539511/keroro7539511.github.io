@@ -59,10 +59,15 @@
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
         $("#right_top > img").eq(index).addClass("show").siblings().removeClass("show");
+        let scrollHeight = $('#right_top').prop('scrollHeight');
+        $('#right_top').scrollTop(scrollHeight, 500);
     });
 
     $('#submit').on('click', function(){
         $('#img_change').attr('src', '/icon/chat/右邊/2.png')
+        right_top.scrollTo(0, document.getElementById('right_top').scrollHeight);
+        $('#text').removeAttr('disabled');
+        document.getElementById('text').value = '';
     });
 
 

@@ -41,7 +41,7 @@ body {
 #chat{
     font-size: 30px;
     margin-left: 8%;
-    margin-top: 4%;
+    margin-top: 15%;
     margin-bottom: 10%;
 }
 
@@ -73,23 +73,27 @@ body {
 
 
 .img_fix{
-    height: 90%;
+    height: 100%;
+}
+
+.img_fix:hover{
+    background-color: rgb(230, 230, 230);
 }
 
 .box_position:hover{
     background-color: rgb(240, 240, 240);
 }
 
+
 #right_top{
-    width: 98%;
+    width: 90%;
     height: 80%;
     border: 3px red hidden;
     margin-top: 2%;
-    margin-left: 0.5%;
+    margin-left: 5%;
     overflow: auto;
 
 }
-
 
 .content{
     width: 100%;
@@ -126,6 +130,7 @@ body {
     padding-left: 1%;
     margin-top: 1%;
     border-radius: 5px;
+    border-width: 1px;
 }
 
 

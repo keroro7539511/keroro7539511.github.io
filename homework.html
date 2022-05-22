@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="icon" href="logo.ico" type="image/x-icon"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/card_inforamation.css"/>
+        <link rel="stylesheet" href="/css/common.css"/>
+    </head>
+    <header class="include" file="header.html">引入</header>
+    <body>
+        <div class="add">
+            <img src="/icon/team/组 787.png"/>
+        </div>
+        <div class="card_position">
+            <div class="buttom_size">
+                <a href="#">
+                    <div class="div_size hover_color">
+                        <div class="pic_text_size">
+                            <img src="/icon/team/1_使用者介面設計.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="buttom_size">
+                <a href="#">
+                    <div class="div_size hover_color">
+                        <div class="pic_text_size">
+                            <img src="/icon/team/2_研究生日常.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="buttom_size">
+                <a href="#">
+                    <div class="div_size hover_color">
+                        <div class="pic_text_size">
+                            <img src="/icon/team/3_設計方法.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="buttom_size">
+                <a href="class.html">
+                    <div class="div_size hover_color">
+                        <div class="pic_text_size">
+                            <img src="/icon/team/4_研究室.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="buttom_size">
+                <a href="#">
+                    <div class="div_size hover_color">
+                        <div class="pic_text_size">
+                            <img src="/icon/team/5_個人行程.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="buttom_size">
+                <a href="#">
+                    <div class="div_size hover_color">
+                        <div class="pic_text_size">
+                            <img src="/icon/team/6_家族行程.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </body>
+
+
+
+
+
+    <script>
+        $(".include").each(function(){
+            if(!!$(this).attr("file")) {
+                var $includeObj = $(this);
+                $(this).load($(this).attr("file"), function(html){
+                    $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+                })
+            }
+        });
+    </script>   
+
+</html>

@@ -1,0 +1,170 @@
+#top{
+    width: 100%;
+    height: 12%;
+    border: 3px solid rgb(176, 176, 176);
+    margin-top: -2%;
+    display: flex;
+}
+
+
+.img_position{
+    height: 35%;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+#red{
+    height: 50%;
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+
+#select{
+    width: 40%;
+    height: 100%;
+    margin-left: 15%;
+    border: 3px hidden blue;
+    justify-content: center;
+    display: flex;
+    flex-direction:row;
+}
+
+.btn_switch{
+    font-size: 20px;
+    height: 70%;
+    width: 25%;
+    border: 3px hidden rgb(15, 215, 241);
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+
+#content>.show {
+    display: flex;
+}
+
+#content>div {
+    display: none;
+}
+
+.active{
+    border-bottom: 10px rgb(16,115,215) solid;
+
+}
+
+#content{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.img_test{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.img_test > img{
+    height: 20%;
+    margin-top: 13%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+
+#left_part{
+    width: 65%;
+    height: 80%;
+    border: 10px rgb(16,115,215) hidden;
+}
+
+#right_part{
+    width: 25%;
+    height: 80%;
+    border: 10px rgb(0, 252, 155) hidden;
+    margin-left: 2%;
+}
+
+
+#img_size{
+    width: 100%;
+}
+
+#stop{
+    margin-top: 1%;
+    position: relative;
+    left: 77%;
+    margin-bottom: 1%;
+}
+
+hr{
+    border-color: rgb(149, 192, 237);
+}
+
+#ppt_div{
+    width: 98%;
+    height: 60%;
+    border: 10px rgb(216, 253, 5) hidden;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ppt_size{
+    width: 180px;
+    height: 180px;
+    border: 2px rgb(179, 179, 179) solid;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ppt_size > img{
+    width: 70%;
+    height: 70%;
+}
+
+.ppt_size:hover{
+    background-color: rgb(228, 240, 251);
+    cursor: pointer;
+
+}
+
+#right_top{
+    width: 100%;
+    height: 53%;
+    border: 2px rgb(179, 179, 179) solid;
+    border-radius: 10px;
+
+}
+
+#right_bottom{
+    margin-top: 5%;
+    width: 100%;
+    height: 24%;
+    border: 2px rgb(179, 179, 179) solid;
+    border-radius: 10px;
+}
+
+#right_top > img{
+    width: 100%;
+}
+
+#right_bottom > img{
+    width: 100%;
+}

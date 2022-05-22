@@ -406,10 +406,18 @@ li {
     margin-left: -10%;
 }
 
-
-
 #in_all > input{
     width: 40%;
     margin-right: 2%;
     margin-left: 2%;
+}
+
+
+#title{
+    border-radius: 0;
+}
+
+
+.fc-daygrid-day-number{
+    margin-right: 40%;
 }

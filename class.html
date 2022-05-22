@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/class.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<header class="include" file="header.html">引入</header>
+
+<body>
+    <div id="top">
+        <img class="img_position" src="/icon/homework/選擇頁面/组 723.png"/>
+        <img id="red" src="/icon/homework/選擇頁面/组 331.png"/>
+        <div id="select">
+            <div class="btn_switch active">訊息串</div>
+            <div class="btn_switch">課堂作業</div>
+            <div class="btn_switch">成員</div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="img_test show">
+            <img src="/icon/research/此頁面待開發中....png"/>
+        </div>
+        <div id="main">
+            <img src="/icon/homework/選擇頁面/藍色字.png"/>
+            <div class="btn_size">
+                <img src="/icon/homework/選擇頁面/點選前_專案簡報.png"/>
+            </div>
+            <a href="meeting_ppt.html"><div class="btn_size">
+                <img src="/icon/homework/選擇頁面/點選前_開會簡報.png"/>
+            </div></a>
+        </div>
+        <div class="img_test">
+            <img src="/icon/research/此頁面待開發中....png"/>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+            })
+        }
+    });
+
+    $("#select").on("click", "div", function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#content>div").eq(index).addClass("show").siblings().removeClass("show");
+    
+    });
+</script>
+
+</html>
