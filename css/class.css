@@ -77,14 +77,15 @@
     margin-top: 2%;
     display: flex;
     width: 60%;
-    height: 80%;
+    height: 40%;
     border: 5px rgb(255, 0, 140) hidden;
     flex-direction: column;
+    justify-content: center;
 
 }
 
 #main > img{
-    width: 100%;
+    width: 95%;
 }
 
 .btn_size > img{
