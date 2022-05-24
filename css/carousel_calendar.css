@@ -1,0 +1,426 @@
+body {
+    width: 100%;
+    height: 95%;
+    border-color: red;
+    border-width: 5px;
+    border-style: hidden;
+}
+
+#left_part {
+    width: 15%;
+    height: 70%;
+    float: left;
+    display: inline;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-style: hidden;
+    margin-left: 2%;
+}
+
+.right_part {
+    width: 75%;
+    height: 70%;
+    float: left;
+    display: inline;
+    border-color: blue;
+    border-width: 5px;
+    border-style: hidden;
+    overflow: auto;
+}
+
+p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#roll {
+    width: 100%;
+    height: 50%;
+    border-color: pink;
+    border-width: 5px;
+    border-style: hidden;
+    overflow: auto;
+}
+
+.div_shape {
+    align-items: center;
+    width: 80%;
+    height: 17%;
+    border-width: 0.1mm;
+    border-style: hidden;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+#roll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.right_part::-webkit-scrollbar {
+    display: none;
+}
+
+#div>.show {
+    opacity: 1;
+    z-index: 1;
+}
+
+#div>div {
+    opacity: 0;
+    z-index: -1;
+}
+
+.canlendar {
+    position: absolute;
+    width: 75%;
+}
+
+
+
+.fc-col-header-cell-cushion,
+.fc-daygrid-day-number {
+    color: black;
+}
+
+.modal-content {
+    height: 85%;
+    
+}
+
+.text_save_div {
+    width: 90%;
+    height: 9.5%;
+    border-color: blue;
+    border-width: 5px;
+    border-style: hidden;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+#x {
+    height: 15px;
+    width: 15px;
+}
+
+
+.text {
+    width: 65%;
+    margin-left: 3%;
+    padding-bottom: 1%;
+    border-color: #F27D8D;
+    background-color: white;
+}
+
+input {
+    padding-left: 4%;
+    width: 25%;
+    height: 40px;
+    margin-left: 5%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-width: 1px;
+    background-color: #E5E5E5;
+    border-radius: 7px;
+
+
+}
+
+
+#date_div {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+
+.date {
+    text-align: center;
+    width: 150px;
+    border-color: #E5E5E5;
+}
+
+#save {
+    width: 25%;
+    margin-left: 5%;
+}
+
+
+.form_size {
+    width: 70%;
+    margin-left: 3%;
+    padding-bottom: 1%;
+    border-color: #E5E5E5;
+    position: absolute;
+    z-index: 0;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: 40px;
+}
+
+.img {
+    margin-bottom: 1%;
+    position: absolute;
+    z-index: 1;
+    width: 6%;
+}
+
+
+.select_box {
+    position: relative;
+    margin: 10px;
+    padding: 0;
+}
+
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 3%;
+}
+
+.select_box input {
+    display: block;
+    line-height: 25px;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.select_box ul {
+    position: absolute;
+    border: 1px solid #ccc;
+    background: white;
+    overflow: hidden;
+    display: none;
+    z-index: 99999;
+    width: 100%;
+}
+
+.select_box ul li {
+    display: block;
+    height: 39px;
+    overflow: hidden;
+    line-height: 40px;
+    margin-left: -30px;
+    width: 160%;
+}
+
+
+.hover {
+    background: #FFF3F3;
+}
+
+
+.select_box {
+
+    border-color: blue;
+    border-width: 5px;
+    border-style: hidden;
+    width: 83%;
+    margin-left: 40px;
+}
+
+
+#p {
+    margin-top: 5%;
+}
+
+#pic {
+    margin-top: 5%;
+    width: 80%;
+}
+
+.img_position {
+    width: 120%;
+}
+
+#exp {
+    width: 80%;
+}
+
+.list_icon{
+    width: 7%;
+    margin-right: 2%;
+}
+
+
+
+#not_all{
+    display: flex;
+    margin-left: -15%;
+}
+
+#not_all > input{
+    width: 26%;
+    padding: 1%;
+}
+
+
+.time_size{
+    width: 20%;
+    margin-top: 0;
+    margin-left: 1%;
+}
+
+#not_all > label{
+    margin-top: 1.5%;
+    margin-left: -1%;
+}
+
+
+.btn-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #ccc;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, .13) inset;
+}
+
+.btn-box .btn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(242, 125, 141);
+    margin-left: 0;
+    /*動畫從ml為0開始*/
+    transition: .5s;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox:checked+.btn-box {
+    background-color: rgb(252, 210, 216);
+}
+
+.checkbox:checked+.btn-box .btn {
+    margin-left: 20px;
+}
+
+.modal-body > label{
+    width: 20%;
+    margin-left: 5%;
+}
+
+
+#in_all{
+    display: none;
+}
+
+.d04{
+    background-image: url('/icon/carousel_calendar/助教Y.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d11{
+    background-image: url('/icon/carousel_calendar/助教Y.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d14{
+    background-image: url('/icon/carousel_calendar/節日.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d16{
+    background-image: url('/icon/carousel_calendar/助教G.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d18{
+    background-image: url('/icon/carousel_calendar/輪播圖18.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d22{
+    background-image: url('/icon/carousel_calendar/出差.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d23{
+    background-image: url('/icon/carousel_calendar/助教G.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d25{
+    background-image: url('/icon/carousel_calendar/輪播圖25.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d28{
+    background-image: url('/icon/carousel_calendar/奶奶家.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d29{
+    background-image: url('/icon/carousel_calendar/出差.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+.d30{
+    background-image: url('/icon/carousel_calendar/輪播圖30.png');
+    background-size: 130px 53px;
+    height: 60px;
+    width: 130px;
+    background-repeat: no-repeat;
+    left: 17%;
+}
+
+/* .fc-daygrid-day-events{
+    display: flex;
+} */
