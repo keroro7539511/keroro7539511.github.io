@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/carousel_chat.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<header class="include" file="header.html">引入</header>
+
+<body>
+    <div id="top">
+        <p>聊天</p>
+        <div id="name_div" class="carousel">
+            <div class="div_size carousel-item">
+                <img class="btn_size " id="s1" src="/icon/chat/上方/1_點選後_李萱萱.png" />
+            </div>
+            <div class="div_size carousel-item">
+                <img class="btn_size " id="s2" src="/icon/chat/上方/2_點選前_梁咪咪.png" />
+            </div>
+            <div class="div_size carousel-item">
+                <img class="btn_size " id="s3" src="/icon/chat/上方/3_點選前_鄧有又.png" />
+            </div>
+            <div class="div_size carousel-item">
+                <img class="btn_size " id="s4" src="/icon/chat/上方/4_點選前_歐青青.png" />
+            </div class="div_size">
+            <div class="div_size carousel-item">
+                <img class="btn_size " id="s5" src="/icon/chat/上方/5_點選前_劉大師.png" />
+            </div>
+            <div class="div_size carousel-item">
+                <img class="btn_size " id="s6" src="/icon/chat/上方/6_點選前_林資資.png" />
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="div">
+            <img class="wait"  src="/icon/research/此頁面待開發中....png"/>
+            <img class="content" id="img_change" src="/icon/chat/右邊/1.png"/>
+            <img class="wait" src="/icon/research/此頁面待開發中....png"/>
+            <img class="content" src="/icon/chat/右邊/组 926.png"/>
+            <img class="wait" src="/icon/research/此頁面待開發中....png"/>
+            <img class="wait" src="/icon/research/此頁面待開發中....png"/>
+        </div>
+        <div id="right_middle">
+            <input type="text" id="text" placeholder="輸入訊息" onclick="click_title()" />
+        </div>
+        <div id="right_buttom">
+            <img id="tool_list" src="/icon/chat/右邊/輸入訊息框_下方icon_1.png"/>
+            <img id="submit" src="/icon/chat/右邊/傳送_icon.png"/>
+        </div>
+    </div>
+</body>
+<script>
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                $includeObj.after(html).remove();    //加載的文件內容寫入到當前標籤後面並移除當前標籤
+            })
+        }
+    });
+
+    $(document).ready(function () {
+        $('.carousel').carousel();
+    });
+
+
+    $("#name_div").on("click", "div", function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#div>img").eq(index).addClass("show").siblings().removeClass("show");
+        let scrollHeight = $('#div').prop('scrollHeight');
+        $('#div').scrollTop(scrollHeight, 500);
+        if(index == 0){
+            $('#s1').attr('src', '/icon/chat/上方/1_點選後_李萱萱.png');
+            $('#s2').attr('src', '/icon/chat/上方/2_點選前_梁咪咪.png');
+            $('#s3').attr('src', '/icon/chat/上方/3_點選前_鄧有又.png');
+            $('#s4').attr('src', '/icon/chat/上方/4_點選前_歐青青.png');
+            $('#s5').attr('src', '/icon/chat/上方/5_點選前_劉大師.png');
+            $('#s6').attr('src', '/icon/chat/上方/6_點選前_林資資.png');
+        }
+        if(index == 1){
+            $('#s1').attr('src', '/icon/chat/上方/1_點選前_李萱萱.png')
+            $('#s2').attr('src', '/icon/chat/上方/2_點選後_梁咪咪.png')
+            $('#s3').attr('src', '/icon/chat/上方/3_點選前_鄧有又.png')
+            $('#s4').attr('src', '/icon/chat/上方/4_點選前_歐青青.png')
+            $('#s5').attr('src', '/icon/chat/上方/5_點選前_劉大師.png')
+            $('#s6').attr('src', '/icon/chat/上方/6_點選前_林資資.png')
+        }
+        if(index == 2){
+            $('#s1').attr('src', '/icon/chat/上方/1_點選前_李萱萱.png')
+            $('#s2').attr('src', '/icon/chat/上方/2_點選前_梁咪咪.png')
+            $('#s3').attr('src', '/icon/chat/上方/3_點選後_鄧有又.png')
+            $('#s4').attr('src', '/icon/chat/上方/4_點選前_歐青青.png')
+            $('#s5').attr('src', '/icon/chat/上方/5_點選前_劉大師.png')
+            $('#s6').attr('src', '/icon/chat/上方/6_點選前_林資資.png')
+        }
+        if(index == 3){
+            $('#s1').attr('src', '/icon/chat/上方/1_點選前_李萱萱.png')
+            $('#s2').attr('src', '/icon/chat/上方/2_點選前_梁咪咪.png')
+            $('#s3').attr('src', '/icon/chat/上方/3_點選前_鄧有又.png')
+            $('#s4').attr('src', '/icon/chat/上方/4_點選後_歐青青.png')
+            $('#s5').attr('src', '/icon/chat/上方/5_點選前_劉大師.png')
+            $('#s6').attr('src', '/icon/chat/上方/6_點選前_林資資.png')
+        }
+        if(index == 4){
+            $('#s1').attr('src', '/icon/chat/上方/1_點選前_李萱萱.png')
+            $('#s2').attr('src', '/icon/chat/上方/2_點選前_梁咪咪.png')
+            $('#s3').attr('src', '/icon/chat/上方/3_點選前_鄧有又.png')
+            $('#s4').attr('src', '/icon/chat/上方/4_點選前_歐青青.png')
+            $('#s5').attr('src', '/icon/chat/上方/5_點選後_劉大師.png')
+            $('#s6').attr('src', '/icon/chat/上方/6_點選前_林資資.png')
+        }
+        if(index == 5){
+            $('#s1').attr('src', '/icon/chat/上方/1_點選前_李萱萱.png')
+            $('#s2').attr('src', '/icon/chat/上方/2_點選前_梁咪咪.png')
+            $('#s3').attr('src', '/icon/chat/上方/3_點選前_鄧有又.png')
+            $('#s4').attr('src', '/icon/chat/上方/4_點選前_歐青青.png')
+            $('#s5').attr('src', '/icon/chat/上方/5_點選前_劉大師.png')
+            $('#s6').attr('src', '/icon/chat/上方/6_點選後_林資資.png')
+        }
+    });
+
+    
+    $('#submit').on('click', function(){
+        $('#img_change').attr('src', '/icon/chat/右邊/2.png')
+        let right_top = document.getElementById('div');
+        right_top.scrollTo(0, document.getElementById('div').scrollHeight);
+        $('#text').removeAttr('disabled');
+        document.getElementById('text').value = '';
+
+    });
+
+
+    function click_title() {
+        document.getElementById('text').value = '老師找核銷大師';
+        document.getElementById('text').disabled = true;
+    }
+</script>
+
+</html>
