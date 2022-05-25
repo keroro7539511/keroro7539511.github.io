@@ -45,6 +45,8 @@ header{     /*header 主體頁面*/
 .img_situation{
     margin-top: 30px;
     margin-right: 1%;
+    height: 90px;
+
 }
 
 .img_situation:hover{
