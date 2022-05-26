@@ -175,7 +175,7 @@ p {
 
 
 .modal-content {
-    height: 85%;
+    height: 90%;
 }
 
 .text_save_div {
@@ -340,6 +340,7 @@ li {
 #not_all{
     display: flex;
     margin-left: -15%;
+    border: 3px red hidden;
 }
 
 #not_all > input{
@@ -398,12 +399,15 @@ li {
 .modal-body > label{
     width: 20%;
     margin-left: 5%;
+    margin-top: -5%;
 }
 
 
 #in_all{
     display: none;
     margin-left: -10%;
+    border: 3px blue hidden;
+    margin-bottom: 10%;
 }
 
 #in_all > input{

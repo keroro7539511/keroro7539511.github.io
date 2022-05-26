@@ -84,7 +84,7 @@ p {
 }
 
 .modal-content {
-    height: 85%;
+    height: 90%;
     
 }
 
@@ -196,6 +196,7 @@ li {
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
+    text-align: center;
 }
 
 .select_box ul {
@@ -318,11 +319,13 @@ li {
 .modal-body > label{
     width: 20%;
     margin-left: 5%;
+    margin-top: -5%;
 }
 
 
 #in_all{
     display: none;
+    margin-bottom: 10%;
 }
 
 
@@ -333,4 +336,9 @@ li {
 
 .fc-daygrid-day-number{
     margin-right: 40%;
+}
+
+
+.select_box .left_size{
+    text-align: left;
 }

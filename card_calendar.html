@@ -85,7 +85,7 @@
                         <div class="text_save_div">
                             <img id="research" src="/icon/menu/紅色/蒙版组 11.png" class="img" />
 
-                            <div class="select_box"><input id="myselect" type="text" value="研究室" readonly="readonly">
+                            <div class="select_box"><input id="myselect" class="left_size" type="text" value="研究室" readonly="readonly">
                                 <ul class="select_ul " id="ul">
                                     <li class="li" value="使用者介面設計"><img class="list_icon"
                                             src="/icon/menu/下拉式選單/蒙版组 31.png" />使用者介面設計</li>
@@ -103,7 +103,7 @@
                         <div class="text_save_div">
                             <img id="alert" src="/icon/menu/紅色/蒙版组 12.png" class="img" />
 
-                            <div class="select_box"><input id="myselect" type="text" value="無通知" readonly="readonly">
+                            <div class="select_box"><input id="myselect" type="text" class="left_size" value="無通知" readonly="readonly">
                                 <ul class="select_ul ">
                                     <li class="active">無通知</li>
                                 </ul>
@@ -112,7 +112,7 @@
                         <div class="text_save_div">
                             <img id='repeat' src="/icon/menu/紅色/蒙版组 13.png" class="img" />
 
-                            <div class="select_box"><input id="myselect" type="text" value="無重複" readonly="readonly">
+                            <div class="select_box"><input id="myselect" type="text" class="left_size" value="無重複" readonly="readonly">
                                 <ul class="select_ul ">
                                     <li class="active">無重複</li>
                                 </ul>
@@ -535,6 +535,8 @@
                 $('#save').attr('src', '/icon/menu/紅色/组 754.png');
                 $('#x').attr('src', '/icon/menu/紅色/蒙版组 9.png');
                 $('.text').css('border-color', '#F27D8D');
+                $('.btn-box .btn').css('background-color', 'rgb(242, 125, 141)');
+                $(':checked + .btn-box').css('background-color', 'rgb(252, 210, 216)');
             }
 
             if ($(this).index() == 1) {
@@ -549,6 +551,8 @@
                 $('#save').attr('src', '/icon/menu/綠色/组 10.png');
                 $('#x').attr('src', '/icon/menu/綠色/蒙版组 9.png');
                 $('.text').css('border-color', '#91DA72');
+                $('.btn-box .btn').css('background-color', 'rgb(145, 218, 114)');
+                $(':checked + .btn-box').css('background-color', 'rgb(214, 253, 197)');
             }
             if ($(this).index() == 0) {
                 $('#member').attr('src', '/icon/menu/黃色/蒙版组 10.png');
@@ -562,6 +566,8 @@
                 $('#save').attr('src', '/icon/menu/黃色/组 10.png');
                 $('#x').attr('src', '/icon/menu/黃色/蒙版组 9.png');
                 $('.text').css('border-color', '#FFCF5C');
+                $('.btn-box .btn').css('background-color', 'rgb(255, 207, 92)');
+                $(':checked + .btn-box').css('background-color', 'rgb(255, 228, 161)');
             }
             if ($(this).index() == 3) {
                 $('#member').attr('src', '/icon/menu/藍色/蒙版组 10.png');
@@ -575,6 +581,8 @@
                 $('#save').attr('src', '/icon/menu/藍色/组 10.png');
                 $('#x').attr('src', '/icon/menu/藍色/蒙版组 9.png');
                 $('.text').css('border-color', '#00CAF1');
+                $('.btn-box .btn').css('background-color', 'rgb(0, 202, 241)');
+                $(':checked + .btn-box').css('background-color', 'rgb(173, 233, 244)');
             }
             if ($(this).index() == 4) {
                 $('#member').attr('src', '/icon/menu/紫色/蒙版组 10.png');
@@ -588,6 +596,8 @@
                 $('#save').attr('src', '/icon/menu/紫色/组 10.png');
                 $('#x').attr('src', '/icon/menu/紫色/蒙版组 9.png');
                 $('.text').css('border-color', '#C68CCF');
+                $('.btn-box .btn').css('background-color', 'rgb(198, 140, 207)');
+                $(':checked + .btn-box').css('background-color', 'rgb(220, 200, 223)');
             }
         });
 

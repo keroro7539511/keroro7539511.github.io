@@ -105,3 +105,22 @@ hr {
 p{
     margin-bottom: 5%;
 }
+
+
+.buttom_size{
+    background-color: #F0F0F0;
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 180px;
+    height: 210px;
+    border-color: #E5E5E5;
+    border-width:0.1mm;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card_position{
+    display: flex;
+    justify-content: center;
+}
