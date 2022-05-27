@@ -4,6 +4,11 @@
 
 .meeting_icon_flex{
     display: flex;
-    margin-top: 70%;
+    margin-top: 50%;
     margin-left: 10%;
+}
+
+
+#wallpaper{
+    margin-top: -10%;
 }

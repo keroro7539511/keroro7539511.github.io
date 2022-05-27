@@ -20,7 +20,7 @@
         crossorigin="anonymous"></script>
 
 </head>
-<header class="include" file="header.html">引入</header>
+<header class="include" file="list_header.html">引入</header>
 
 
 <body>
@@ -39,8 +39,8 @@
                         </div>
                         <div id="date_div">
                             <div id="not_all">
-                                <input type="date" value="2022-03-17" class="date" />
-                                <div class="select_box time_size"><input id="myselect" type="text" value="下午5:30"
+                                <input type="date" value="2022-03-17" class="date" id="time1" />
+                                <div class="select_box time_size"><input id="myselect" type="text"  value="下午5:30"
                                         readonly="readonly">
                                     <ul class="select_ul" id="ul">
                                         <li>下午4:30</li>
@@ -66,9 +66,9 @@
                                 <input type="date" value="2022-03-17" class="date" />
                             </div>
                             <div id="in_all">
-                                <input type="date" value="2022-03-26" class="date" />
+                                <input type="date" value="2022-03-26" class="date time" />
                                 <label>到</label>
-                                <input type="date" value="2022-03-26" class="date" />
+                                <input type="date" value="2022-03-26" class="date time" />
                             </div>
                         </div>
                         
@@ -192,10 +192,12 @@
         if($(".checkbox").is(':checked')){
             $('#not_all').css('display', 'none');
             $('#in_all').css('display', 'flex');
+            $('.time').attr('value', $('#time1').val());
         }
         else{
             $('#not_all').css('display', 'flex');
             $('#in_all').css('display', 'none');
+            $('.time').attr('value', $('#time1').val());
 
         }
     });

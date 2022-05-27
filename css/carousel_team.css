@@ -1,3 +1,8 @@
+a{
+    
+    cursor: pointer;
+}
+
 .line{
     border-style: solid;
     border-width: 0px 0px 1px 0px;
@@ -8,7 +13,7 @@
     background-color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
-    margin-top: -3%;
+    margin-top: -1%;
     padding-bottom: 1%;
 }
 
@@ -58,11 +63,12 @@
 .bottom{
     background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 48%;
+    height: 70%;
     display: flex;
 }
 
 #bottom_carousel{
+    
     opacity: 0;
 }
 
@@ -73,7 +79,7 @@
 .bottom .carousel .carousel-item{
     width: 550px;
     height: 450px;
-    margin-top: 1%;
+    margin-top: -1%;
     margin-left: 0%;
 }
 
@@ -87,7 +93,7 @@
 }
 
 .content p{
-    margin-top: 2%;
+    margin-top: 5%;
     font-size: 1.2rem;
 }
 
@@ -99,7 +105,7 @@
 .week{
     display: flex;
     align-items: center;
-    margin-top: 7%;
+    margin-top: 3%;
     margin-left: 5%;
 }
 
@@ -119,6 +125,7 @@
     display: flex;
     align-items: center;
     margin-left: 5%;
+    margin-top: -4%;
 }
 
 .date a{
@@ -136,7 +143,7 @@
 .time{
     display: flex;
     align-items: center;
-    margin-top: 7%;
+    margin-top: 2%;
     margin-left: 5%;
 }
 
@@ -232,4 +239,12 @@
 
 .hover{
     background-color: #E5E5E5;
+}
+
+#left{
+    margin-left: -8%;
+}
+
+.add_calendar{
+    margin-top: -5%;
 }

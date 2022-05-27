@@ -54,7 +54,7 @@ body{
     color: black;
     text-align: center;
     height: 70%;
-    padding-top: 6vh;
+    margin-top: 22%;
 
 }
 .select2-results__option--highlighted {
@@ -65,5 +65,5 @@ body{
 .add{
     position: absolute;
     right: 0;
-    margin-top: -2%;
+    margin-top: -1%;
 }

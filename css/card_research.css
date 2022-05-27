@@ -155,7 +155,6 @@ hr {
     border-color: blue;
     border-width: 1px;
     border-style: hidden;
-    margin-top: 2.5%;
     margin-left: 3%;
     height: 35%;
     width: 6%;
@@ -173,7 +172,7 @@ hr {
     margin-top: 3%;
     height: 34%;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 #second_list {
