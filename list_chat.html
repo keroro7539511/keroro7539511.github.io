@@ -61,6 +61,10 @@
         $("#right_top > img").eq(index).addClass("show").siblings().removeClass("show");
         let scrollHeight = $('#right_top').prop('scrollHeight');
         $('#right_top').scrollTop(scrollHeight, 500);
+        if(index == 0)
+            $('#text').removeAttr('disabled');
+        else
+            $('#text').attr('disabled', 'true');
     });
 
     $('#submit').on('click', function(){

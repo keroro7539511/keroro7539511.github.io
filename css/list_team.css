@@ -414,7 +414,7 @@ p{
 }
 
 .week{
-    margin-top: -25%;
+    margin-top: -30%;
     margin-left: 2%;
     display: flex;
 }
@@ -440,9 +440,10 @@ p{
 }
 
 .date{
-    margin-top: 2%;
+    margin-top: 3%;
     margin-left: 9.5%;
     display: flex;
+    
 }
 
 .m_data2{
@@ -454,6 +455,7 @@ p{
     height: 3%;
     display: flex;
     margin-left: 8%;
+    margin-bottom: 3%;
 }
 
 .m_line2_1{

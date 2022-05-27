@@ -38,7 +38,7 @@
                         </div>
                         <div id="date_div">
                             <div id="not_all">
-                                <input type="date" value="2022-03-17" class="date" />
+                                <input type="date" value="2022-03-22" class="date" id="time1" />
                                 <div class="select_box time_size"><input id="myselect" type="text" value="下午5:30"
                                         readonly="readonly">
                                     <ul class="select_ul" id="ul">
@@ -62,12 +62,12 @@
                                         <li>下午9:30</li>
                                     </ul>
                                 </div>
-                                <input type="date" value="2022-03-17" class="date" />
+                                <input type="date" value="2022-03-22" class="date" />
                             </div>
                             <div id="in_all">
-                                <input type="date" value="2022-03-26" class="date" />
+                                <input type="date" value="2022-03-22" class="date time" />
                                 <label>到</label>
-                                <input type="date" value="2022-03-26" class="date" />
+                                <input type="date" value="2022-03-22" class="date time" />
                             </div>
                         </div>
 
@@ -191,10 +191,12 @@
         if($(".checkbox").is(':checked')){
             $('#not_all').css('display', 'none');
             $('#in_all').css('display', 'block');
+            $('.time').attr('value', $('#time1').val());
         }
         else{
             $('#not_all').css('display', 'flex');
             $('#in_all').css('display', 'none');
+            $('.time').attr('value', $('#time1').val());
 
         }
     });

@@ -85,7 +85,8 @@
 }
 
 #main > img{
-    width: 95%;
+    width: 90%;
+    margin-left: 5%;
 }
 
 .btn_size > img{
