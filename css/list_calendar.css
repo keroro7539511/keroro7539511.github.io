@@ -131,6 +131,11 @@ p {
     border-radius: 3px;
 }
 
+.pink {
+    position: relative;
+    left: 20px;
+    width: 80%;
+}
 .pink::before {
     position: absolute;
     top: 0px;
