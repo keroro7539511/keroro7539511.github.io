@@ -131,6 +131,18 @@ p {
     border-radius: 3px;
 }
 
+.pink::before {
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    content: "";
+    background-color: #FF9FDE;
+    width: 7px;
+    height: 100%;
+    z-index: 20;
+    border-radius: 3px;
+}
+
 .blue {
     position: relative;
     left: 20px;

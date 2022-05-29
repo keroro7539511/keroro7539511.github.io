@@ -96,6 +96,7 @@ body{
 
 #word{
     margin-top: 20px;
+    margin-left: 2%;
 }
 
 .select_box {
@@ -205,6 +206,7 @@ li {
 }
 
 #mid_line{
+    margin-top: -2%;
     background: linear-gradient(to right, transparent, black, transparent);
     margin-bottom: 1%;
 }
