@@ -223,7 +223,6 @@ hr {
     height: 10%;
     width: 6%;
     margin-top: 2%;
-    display: none;
 
 }
 
@@ -238,7 +237,7 @@ hr {
     border-color: rgb(19, 216, 173);
     border-width: 1px;
     border-style: hidden;
-    display: none;
+    display: flex;
 
 }
 
@@ -316,7 +315,6 @@ hr {
 
 label {
     margin-left: 2%;
-    display: none;
 }
 
 .no_open{
