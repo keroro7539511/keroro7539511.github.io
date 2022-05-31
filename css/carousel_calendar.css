@@ -348,19 +348,34 @@ li {
     border: 1px solid #000000;
 }
 
-.switch.s{
+.switch.R{
     margin-left: 3%;
 }
-
-.switch.s label .lever {
+.switch.R label .lever {
     background-color: #c0c0c0;
 }
-.switch.s label input[type=checkbox]:checked+.lever {
+.switch.R label input[type=checkbox]:checked+.lever {
     background-color: #ffced6;
 }
-.switch.s label input[type=checkbox]:checked+.lever:after {
+.switch.R label input[type=checkbox]:checked+.lever:after {
     background-color: #F27D8D;
 }
+.switch.R label input[type=checkbox]:checked+.lever.leverY:after {
+    background-color: #FFCF52;
+}
+.switch.R label input[type=checkbox]:checked+.lever.leverG:after {
+    background-color: #91DA72;
+}
+.switch.R label input[type=checkbox]:checked+.lever.leverR:after {
+    background-color: #F27D8D;
+}
+.switch.R label input[type=checkbox]:checked+.lever.leverB:after {
+    background-color: #00CAF1;
+}
+.switch.R label input[type=checkbox]:checked+.lever.leverP:after {
+    background-color: #C68CCF;
+}
+
 
 .s{
     margin-top: -3%;
@@ -374,14 +389,17 @@ li {
 
 .content .carousel{
     height: 80%;
+    width: 100%;
+    margin-left: 0%;
 }
 
 .content .carousel .carousel-item{
     background-color: #ffffff;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: 1px solid #000000;
     border-radius: 10px;
+    margin-top: -2%;
 }
 
 .content_center{

@@ -275,6 +275,10 @@ p{
     justify-content: center;
 }
 
+#c63{
+    margin-left: 7%;
+}
+
 .content_line{
     margin-top: 1%;
     margin-left: 1%;
@@ -365,7 +369,7 @@ p{
     border-radius: 10px;
     width: 3%;
     margin-top: -0.65%;
-    margin-left: 15.9%;
+    margin-left: 16.5%;
 }
 
 .assist_buttom{
@@ -405,6 +409,11 @@ p{
 
 #opened{
     display: none;
+    margin-top: -28%;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    height: 40%;
+    width: 60%;
 }
 
 #closed{
@@ -414,13 +423,34 @@ p{
 }
 
 .week{
-    margin-top: -30%;
+    margin-top: 3%;
     margin-left: 2%;
     display: flex;
+    text-align: center;
+}
+
+#wp1_buttom{
+    border-bottom: 1px solid #000; 
+    padding-bottom: 1%;
+}
+
+#wp2_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#wp3_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#wp4_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
 }
 
 .m_data1{
-    width: 7%;
+    width: 10%;
 }
 
 .m_line1{
@@ -442,18 +472,53 @@ p{
 .date{
     margin-top: 3%;
     margin-left: 9.5%;
-    display: flex;
-    
+    display: none;
+    text-align: center;
+}
+
+#dp1_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#dp2_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#dp3_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#dp4_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#dp5_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#dp6_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#dp7_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
 }
 
 .m_data2{
-    width: 7.1%;
+    width: 10.5%;
     padding-right: 0.6%;
 }
 
 .m_line2{
     height: 3%;
-    display: flex;
+    display: none;
     margin-left: 8%;
     margin-bottom: 3%;
 }
@@ -472,14 +537,37 @@ p{
     margin-top: 2%;
     margin-left: 1.6%;
     display: flex;
+    text-align: center;
+}
+
+#tp1_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#tp2_buttom{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#tbox1{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
+}
+
+#tbox2{
+    border-bottom: 1px solid #000;    
+    padding-bottom: 1%;  
 }
 
 .m_data3{
-    width: 7%;
+    width: 10%;
 }
 
 .to{
-    margin-left: 4%;
+    margin-left: 2%;
+    padding-right: 1%;
+    padding-top: 1%;
     width: 2.7%;
 }
 
@@ -512,10 +600,10 @@ p{
 }
 
 .select_box {
-    width: 60px;
+    width: 11%;
     position: relative;
     margin-top: -0.8%;
-    margin-left: 0%;
+    margin-left: 1%;
     font-size: 12px;
     border: 0px 0px 0px 0px;
 }
@@ -528,11 +616,10 @@ p{
     height: 25px;
     overflow: hidden;
     padding-right: 20px;
-    padding-left: 10px;
 }
 
 .select_box ul {
-    width: 100px;
+    width: 70px;
     position: absolute;
     left: 0;
     overflow: hidden;
@@ -546,8 +633,7 @@ p{
     height: 30px;
     overflow: hidden;
     line-height: 30px;
-    padding-left: 5px;
-    width: 100%;
+    width: 70%;
     cursor: pointer;
 }
 
@@ -625,4 +711,8 @@ label{
 
 .hover{
     background-color: #E5E5E5;
+}
+
+.repeat{
+    width: 7%;
 }

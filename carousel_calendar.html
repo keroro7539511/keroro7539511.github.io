@@ -33,7 +33,7 @@
                 </div>
                 <div id="date_div">
                     <div id="not_all">
-                        <input type="date" value="2022-03-17" class="date" />
+                        <input type="date" value="2022-03-22" class="date" id="time1" />
                         <div class="select_box time_size time_left"><input id="myselect" type="text" value="下午5:30"
                                 readonly="readonly">
                             <ul class="select_ul" id="ul">
@@ -57,12 +57,12 @@
                                 <li>下午9:30</li>
                             </ul>
                         </div>
-                        <input type="date" value="2022-03-17" class="date" />
+                        <input type="date" value="2022-03-22" class="date" />
                     </div>
                     <div id="in_all">
-                        <input type="date" value="2022-03-26" class="date" />
+                        <input type="date" value="2022-03-26" class="date time" />
                         <label>到</label>
-                        <input type="date" value="2022-03-26" class="date" />
+                        <input type="date" value="2022-03-26" class="date time" />
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                     </span>
                     <span class="text">全天</span>
                 </label> -->
-                <div class="switch s">
+                <div id="switch3" class="switch R">
                     <label>
                         <input type="checkbox" id="all_day" class="checkbox">
                         <span class="lever"></span>
@@ -235,11 +235,12 @@
         if ($(".checkbox").is(':checked')) {
             $('#not_all').css('display', 'none');
             $('#in_all').css('display', 'block');
+            $('.time').attr('value', $('#time1').val());
         }
         else {
             $('#not_all').css('display', 'flex');
             $('#in_all').css('display', 'none');
-
+            $('.time').attr('value', $('#time1').val());
         }
     });
 
@@ -725,7 +726,19 @@
         document.getElementById("p_location").style.color = "#FFCF52";
         document.getElementById("p_remark").style.color = "#FFCF52";
         document.getElementById("p_list").style.color = "#FFCF52";
+        document.getElementById("switch1").style.display = "block";
+        document.getElementById("switch2").style.display = "none";
+        document.getElementById("switch3").style.display = "none";
     }
+    $("#position1").click(function(){
+        $('.switch.R label .lever').css('background-color', '#FFEDC5');
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverY', true);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverG', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverR', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverB', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverP', false);
+    });
+
     position2.onclick = function () {
         document.getElementById("img_position").src = "/icon/carousel_calendar/位置G-01.png";
         document.getElementById("img_notice").src = "/icon/carousel_calendar/通知G-01.png";
@@ -744,7 +757,19 @@
         document.getElementById("p_location").style.color = "#91DA72";
         document.getElementById("p_remark").style.color = "#91DA72";
         document.getElementById("p_list").style.color = "#91DA72";
+        document.getElementById("switch1").style.display = "none";
+        document.getElementById("switch2").style.display = "block";
+        document.getElementById("switch3").style.display = "none";
     }
+    $("#position2").click(function(){
+        $('.switch.R label .lever').css('background-color', '#D7FFC5');
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverY', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverG', true);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverR', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverB', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverP', false);
+    });
+    
     position3.onclick = function () {
         document.getElementById("img_position").src = "/icon/carousel_calendar/位置R-01.png";
         document.getElementById("img_notice").src = "/icon/carousel_calendar/通知R-01.png";
@@ -763,7 +788,18 @@
         document.getElementById("p_location").style.color = "#F27D8D";
         document.getElementById("p_remark").style.color = "#F27D8D";
         document.getElementById("p_list").style.color = "#F27D8D";
+        document.getElementById("switch1").style.display = "none";
+        document.getElementById("switch2").style.display = "none";
+        document.getElementById("switch3").style.display = "block";
     }
+    $("#position3").click(function(){
+        $('.switch.R label .lever').css('background-color', '#ffced6');
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverY', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverG', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverR', true);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverB', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverP', false);
+    });
     position4.onclick = function () {
         document.getElementById("img_position").src = "/icon/carousel_calendar/位置B-01.png";
         document.getElementById("img_notice").src = "/icon/carousel_calendar/通知B-01.png";
@@ -783,6 +819,14 @@
         document.getElementById("p_remark").style.color = "#00CAF1";
         document.getElementById("p_list").style.color = "#00CAF1";
     }
+    $("#position4").click(function(){
+        $('.switch.R label .lever').css('background-color', '#AEF5FF');
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverY', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverG', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverR', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverB', true);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverP', false);
+    });
     position5.onclick = function () {
         document.getElementById("img_position").src = "/icon/carousel_calendar/位置P-01.png";
         document.getElementById("img_notice").src = "/icon/carousel_calendar/通知P-01.png";
@@ -802,6 +846,14 @@
         document.getElementById("p_remark").style.color = "#C68CCF";
         document.getElementById("p_list").style.color = "#C68CCF";
     }
+    $("#position5").click(function(){
+        $('.switch.R label .lever').css('background-color', '#F6CCFF');
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverY', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverG', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverR', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverB', false);
+        $('.switch.R label input[type=checkbox]:checked+.lever').toggleClass('leverP', true);
+    });
 
     function click_title() {
         document.getElementById('title').value = '1111';
