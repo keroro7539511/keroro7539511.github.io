@@ -55,8 +55,6 @@
                         <img class="btn_select" id="third" src="/icon/research/右上/3_點選前.png" />
                         <img class="btn_select" id="forth" src="/icon/research/右上/4_點選前.png" />
                         <img class="btn_select" id="fifth" src="/icon/research/右上/5_點選前.png" />
-
-
                     </div>
                     <hr>
                     <div id="right_buttom">
@@ -64,6 +62,12 @@
                             <p>重複：</p>
                         </div>
                         <div id="first_second">
+                            <div id="first_list">
+                                <img class="btn_position" id="f1" src="/icon/research/右下/01_點選前.png" />
+                                <img class="btn_position" id="f2" src="/icon/research/右下/02_點選前.png" />
+                                <img class="btn_position" id="f3" src="/icon/research/右下/03_點選前.png" />
+                                <img class="btn_position" id="f4" src="/icon/research/右下/04_點選前.png" />
+                            </div>
                             <div id="second_list">
                                 <img class="btn_position" id="s1" src="/icon/research/右下/日期_1_點選前.png" />
                                 <img class="btn_position" id="s2" src="/icon/research/右下/日期_2_點選前.png" />
@@ -120,9 +124,8 @@
                                 <span class="btn-box">
                                     <span class="btn"></span>
                                 </span>
-                                <span class="text">重複</span>
+                                <span class="text">全天</span>
                             </label>
-                            <br>
                             <br>
                             <label>
                                 <input type="checkbox" name="" id="" class="checkbox">
@@ -268,6 +271,10 @@
             $('#f2').attr('src', '/icon/research/右下/02_點選後.png');
             $('#f3').attr('src', '/icon/research/右下/03_點選前.png');
             $('#f4').attr('src', '/icon/research/右下/04_點選前.png');
+            $('#second_list').css('display', 'block');
+            $('.second_word').css('display', 'flex');
+            $('#third_list').css('display', 'flex');
+            $('label').css('display', 'flex');
         }
         if (index == 2) {
             $('#f1').attr('src', '/icon/research/右下/01_點選前.png');
