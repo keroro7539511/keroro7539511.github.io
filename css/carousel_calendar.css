@@ -349,7 +349,10 @@ li {
 }
 
 .switch.R{
-    margin-left: 3%;
+    margin-left: 5%;
+    margin-top: -4%;
+    display: flex;
+    align-items: center;
 }
 .switch.R label .lever {
     background-color: #c0c0c0;
