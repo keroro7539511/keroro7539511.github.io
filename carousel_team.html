@@ -49,7 +49,7 @@
                         <a >每月</a>
                         <a >每年</a>
                     </div>
-                    <div class="date">
+                    <div id="date">
                         <a >星期日</a>
                         <a >星期一</a>
                         <a id="date_buttom" >星期二</a>
@@ -188,12 +188,14 @@
         let week_buttom = document.getElementById("week_buttom");
         let date_buttom = document.getElementById("date_buttom");
         let time_buttom = document.getElementById("time_buttom");
+        let week = document.getElementById('date');
 
         week_buttom.onclick = function(){
                 week_buttom.style.backgroundColor = "#FF9FDE";
                 week_buttom.style.color = "#FFFFFF";
                 week_buttom.style.borderColor = "#FF9FDE";
                 week_buttom.style.transitionDuration = "200ms";
+                week.style.display = 'flex';
         }
 
         date_buttom.onclick = function(){

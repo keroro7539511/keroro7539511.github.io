@@ -121,14 +121,15 @@ a{
     width: 12%;
 }
 
-.date{
+#date{
     display: flex;
     align-items: center;
     margin-left: 5%;
     margin-top: -4%;
+    display: none;
 }
 
-.date a{
+#date a{
     border-style: solid;
     border-width: 1px;
     border-color: black;

@@ -74,7 +74,7 @@
                     <span class="text">全天</span>
                 </label> -->
                 <div id="switch3" class="switch R">
-                    <label>
+                    <label style="font-size: 18px;">
                         <input type="checkbox" id="all_day" class="checkbox">
                         <span class="lever"></span>
                         全天
@@ -875,6 +875,20 @@
             var elems = document.querySelectorAll('.carousel');
             var instances = M.Carousel.init(elems);
         }
+
+        $(".select_box input").click(function () {
+            var thisinput = $(this);
+            var thisul = $(this).parent().find("ul");
+            if (thisul.css("display") == "none") {
+                if (thisul.height() > 200) { thisul.css({ height: "200px", "overflow-y": "scroll" }) };
+                thisul.fadeIn("100");
+                thisul.hover(function () { }, function () { thisul.fadeOut("100"); })
+                thisul.find("li").click(function () { thisinput.val($(this).text()); thisul.fadeOut("100"); }).hover(function () { $(this).addClass("hover"); }, function () { $(this).removeClass("hover"); });
+            }
+            else {
+                thisul.fadeOut("fast");
+            }
+        })
     });
 </script>
 
