@@ -151,14 +151,6 @@ hr {
 
 
 
-.word {
-    border-color: blue;
-    border-width: 1px;
-    border-style: hidden;
-    margin-left: 3%;
-    height: 35%;
-    width: 6%;
-}
 
 .word>p {
     font-size: 20px;
@@ -211,7 +203,6 @@ hr {
     border-style: hidden;
     margin-top: 2.5%;
     margin-left: 3%;
-    height: 35%;
     width: 6%;
 }
 
